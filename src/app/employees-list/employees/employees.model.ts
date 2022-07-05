@@ -10,4 +10,5 @@ export class Employee {
     facebookURL: string | undefined;
     instagramURL: string | undefined;
     twitterURL: string | undefined;
+    photo: string | undefined;
 }

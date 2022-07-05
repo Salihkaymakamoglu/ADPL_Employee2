@@ -10,7 +10,10 @@
     <div>
       <ul class="text-right list-unstyled list-inline mb-0">
         <li class="list-inline-item text-white nav-number">
-          <i class="ti-mobile"></i> &nbsp;<span>{{'+' + employee?.countryCode + ' ' + employee?.phoneNumber}}<div class=""></div></span>
+          <i class="ti-mobile"></i> &nbsp;<span
+            >{{ "+" + employee?.countryCode + " " + employee?.phoneNumber }}
+            <div class=""></div
+          ></span>
         </li>
       </ul>
     </div>
@@ -27,7 +30,7 @@
             <div class="col-lg-10">
               <div style="margin-bottom: 1.5rem">
                 <img
-                  src="assets/images/team/team-2.png"
+                  [src]="employee?.photo"
                   alt=""
                   class="img-fluid rounded-circle mx-auto d-block"
                 />
@@ -35,27 +38,39 @@
 
               <div class="text-center">
                 <h1 class="text-white home-title mb-0">
-                  {{ employee?.firstName + ' ' + employee?.lastName}}
+                  {{ employee?.firstName + " " + employee?.lastName }}
                 </h1>
-                <p class="text-muted home-subtitle-center home-subtitle mt-0 mb-0 mx-auto">{{employee?.email}}</p>
+                <p
+                  class="text-muted home-subtitle-center home-subtitle mt-0 mb-0 mx-auto"
+                >
+                  {{ employee?.email }}
+                </p>
                 <p
                   class="text-white home-subtitle-center home-subtitle mt-4 mb-0 mx-auto"
                 >
-                  {{employee.description}}
+                  {{ employee.description }}
                 </p>
                 <div class="">
-                  <ul class="list-inline team-social mt-4 mb-0">
+                  <ul class="text-white list-inline team-social mt-4 mb-0">
                     <li class="list-inline-item">
-                      <a (click)='openInNewTab(employee.facebookURL)'><i class="ti-facebook"></i></a>
+                      <a (click)="openInNewTab(employee.facebookURL)"
+                        ><i class="ti-facebook"></i
+                      ></a>
                     </li>
                     <li class="list-inline-item">
-                      <a (click)='openInNewTab(employee.instagramURL)'><i class="ti-instagram"></i></a>
+                      <a (click)="openInNewTab(employee.instagramURL)"
+                        ><i class="ti-instagram"></i
+                      ></a>
                     </li>
                     <li class="list-inline-item">
-                      <a (click)='openInNewTab(employee.twitterURL)'><i class="ti-twitter-alt"></i></a>
+                      <a (click)="openInNewTab(employee.twitterURL)"
+                        ><i class="ti-twitter-alt"></i
+                      ></a>
                     </li>
                     <li class="list-inline-item">
-                      <a (click)="openInNewTab(employee.linkedinURL)"><i class="ti-linkedin"></i></a>
+                      <a (click)="openInNewTab(employee.linkedinURL)"
+                        ><i class="ti-linkedin"></i
+                      ></a>
                     </li>
                   </ul>
                 </div>
