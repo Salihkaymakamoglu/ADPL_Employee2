@@ -19,8 +19,16 @@ export class EmployeeService {
     });
   }
   getEmployeeById(id: string) {
-    return this.firestore.collection("employee/" + id).snapshotChanges();
+    return new Promise<any>((resolve, reject) => {
+      this.firestore
+        .collection("employee", (ref) => ref.where("id", "==", id)).valueChanges()
+        .subscribe((employee) =>{
+          resolve(employee);
+        }) ;
+        
+    });
   }
+
 
   createEmployee(employee: any) {
     return this.firestore.collection("employee").add(employee);

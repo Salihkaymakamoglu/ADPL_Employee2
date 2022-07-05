@@ -5,13 +5,13 @@ import { Index2Component } from './index2/index2.component';
 
 
 const routes: Routes = [
+    // {
+    //     path: '',
+    //     redirectTo: ':id',
+    //     pathMatch: 'full'
+    // },
     {
-        path: '',
-        redirectTo: '3217321736213',
-        pathMatch: 'full'
-    },
-    {
-        path: '3217321736213',
+        path: ':id',
         component: Index2Component
     }
 ];
@@ -20,4 +20,6 @@ const routes: Routes = [
     imports: [RouterModule.forChild(routes)],
     exports: [RouterModule]
 })
-export class PagesRoutingModule { }
+export class PagesRoutingModule { 
+
+}

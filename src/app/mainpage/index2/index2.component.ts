@@ -1,31 +1,34 @@
-import { Component, OnInit } from '@angular/core';
-import {EmployeeService } from 'src/app/employees-list/employees/employees.service';
+import { Component, OnInit } from "@angular/core";
+import { EmployeeService } from "src/app/employees-list/employees/employees.service";
+import { ActivatedRoute } from "@angular/router";
 
 @Component({
-  selector: 'app-index2',
-  templateUrl: './index2.component.html',
-  styleUrls: ['./index2.component.scss']
+  selector: "app-index2",
+  templateUrl: "./index2.component.html",
+  styleUrls: ["./index2.component.scss"],
 })
-/**
- * Index-2 component
- */
+
 export class Index2Component implements OnInit {
+  id: any;
+  employee: any;
 
-  constructor(private employeeService: EmployeeService) {
-  
 
-   }
+  constructor(
+    private employeeService: EmployeeService,
+    private route: ActivatedRoute
+  ) {}
 
-  currentSection = 'home';
+  currentSection = "home";
 
-  ngOnInit(): void {
- this.getAccout()
+  ngOnInit() {
+    this.id = this.route.snapshot.paramMap.get("id");
+    this.getEmployeeById(this.id);
   }
 
-
- async  getAccout() {
-    const employee = await this.employeeService.getEmployee()
-    console.log(employee)
+  async getEmployeeById(id:string): Promise<any>{
+     const person = await this.employeeService.getEmployeeById(id);
+     this.employee = person[0]
+    console.log(this.employee);
   }
 
   /**
@@ -33,29 +36,22 @@ export class Index2Component implements OnInit {
    */
   // tslint:disable-next-line: typedef
   windowScroll() {
-    const navbar: any = document.getElementById('navbar');
-    if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
-      navbar.style.backgroundColor = '#1a1a1a';
-      navbar.style.padding = '15px 0px';
+    const navbar: any = document.getElementById("navbar");
+    if (
+      document.body.scrollTop > 40 ||
+      document.documentElement.scrollTop > 40
+    ) {
+      navbar.style.backgroundColor = "#1a1a1a";
+      navbar.style.padding = "15px 0px";
+    } else {
+      navbar.style.backgroundColor = "";
+      navbar.style.padding = "20px";
     }
-    else {
-      navbar.style.backgroundColor = '';
-      navbar.style.padding = '20px';
-    }
   }
+  
+  openInNewTab(url: string){
+    window.open(url);
+}
 
-  /**
-   * Toggle navbar
-   */
-  toggleMenu() {
-    document.getElementById('navbarCollapse')?.classList.toggle('show');
-  }
 
-  /**
-   * Section changed method
-   * @param sectionId specify the current sectionID
-   */
-  onSectionChange(sectionId: string) {
-    this.currentSection = sectionId;
-  }
 }
