@@ -15,10 +15,13 @@ import { EmployeeListComponent } from './employees-list/employees-list.component
 import { UniversalDeviceDetectorService } from './device-detector.service';
 import { DeviceDetectorService } from 'ngx-device-detector';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
-    EmployeeListComponent
+    EmployeeListComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -26,7 +29,8 @@ import { DeviceDetectorService } from 'ngx-device-detector';
     PagesModule,
     BrowserAnimationsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+   
   ],
   providers: [
     {

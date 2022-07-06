@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+
 
 @Component({
   selector: 'app-contact',
@@ -11,9 +12,19 @@ import { Component, OnInit } from '@angular/core';
  */
 export class ContactComponent implements OnInit {
 
+  @ViewChild('name') name: any;
+
+
   constructor() { }
 
   ngOnInit(): void {
   }
+
+
+
+  goToBottom(){
+    window.scrollTo(0,document.body.scrollHeight);
+    this.name.nativeElement.focus()
+    }
 
 }

@@ -19,13 +19,13 @@
 .team-social li a:hover,
 .contact-border,
 .back-to-top:hover {
-    background-color: #ff546c !important;
+    background-color: #434854 !important;
 }
 
 .btn-primary,
 .registration-input-box:focus,
 .form-control:focus,.team-social li a:hover {
-    border-color: #ff546c;
+    border-color: #434854;
 }
 
 .btn-primary:hover,

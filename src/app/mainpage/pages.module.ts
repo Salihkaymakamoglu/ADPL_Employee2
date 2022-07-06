@@ -7,6 +7,7 @@ import { PagesRoutingModule } from "./pages-routing.module";
 import { SharedModule } from "../shared/shared.module";
 
 import { Index2Component } from "./index2/index2.component";
+import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,7 @@ import { Index2Component } from "./index2/index2.component";
     CommonModule,
     SharedModule,
     PagesRoutingModule,
-   
+    NgxSkeletonLoaderModule
   ],
 })
 export class PagesModule {}
