@@ -12,6 +12,8 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { environment } from '../environments/environment';
 import { EmployeeListComponent } from './employees-list/employees-list.component';
+import { UniversalDeviceDetectorService } from './device-detector.service';
+import { DeviceDetectorService } from 'ngx-device-detector';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,12 @@ import { EmployeeListComponent } from './employees-list/employees-list.component
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: DeviceDetectorService,
+      useClass: UniversalDeviceDetectorService
+    },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

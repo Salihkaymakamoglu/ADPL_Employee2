@@ -1,6 +1,8 @@
 import { Component, OnInit } from "@angular/core";
 import { EmployeeService } from "src/app/employees-list/employees/employees.service";
 import { ActivatedRoute } from "@angular/router";
+import { DeviceDetectorService } from 'ngx-device-detector';
+
 
 @Component({
   selector: "app-index2",
@@ -11,18 +13,25 @@ import { ActivatedRoute } from "@angular/router";
 export class Index2Component implements OnInit {
   id: any;
   employee: any;
+  deviceInfo : any;
+  isMobile:boolean = false;
+  isTablet:boolean = false;
+  isDesktop:boolean = false;
 
 
   constructor(
     private employeeService: EmployeeService,
-    private route: ActivatedRoute
-  ) {}
+    private route: ActivatedRoute,
+    private deviceService: DeviceDetectorService) {
+      this.epicFunction();
+    } 
 
   currentSection = "home";
 
   ngOnInit() {
     this.id = this.route.snapshot.paramMap.get("id");
     this.getEmployeeById(this.id);
+    
   }
 
   async getEmployeeById(id:string): Promise<any>{
@@ -51,6 +60,18 @@ export class Index2Component implements OnInit {
   
   openInNewTab(url: string){
     window.open(url);
+}
+
+epicFunction() {
+  console.log('hello `Home` component');
+  this.deviceInfo = this.deviceService.getDeviceInfo();
+  this.isMobile = this.deviceService.isMobile();
+  this.isTablet = this.deviceService.isTablet();
+  this.isDesktop = this.deviceService.isDesktop();
+  console.log(this.deviceInfo);
+  console.log(this.isMobile);  // returns if the device is a mobile device (android / iPhone / windows-phone etc)
+  console.log(this.isTablet);  // returns if the device us a tablet (iPad etc)
+  console.log(this.isDesktop); // returns if the app is running on a Desktop browser.
 }
 
 

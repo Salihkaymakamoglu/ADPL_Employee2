@@ -36,7 +36,7 @@
                 />
               </div>
 
-              <div class="text-center">
+              <div class="text-center" >
                 <h1 class="text-white home-title mb-0">
                   {{ employee?.firstName + " " + employee?.lastName }}
                 </h1>
@@ -48,7 +48,7 @@
                 <p
                   class="text-white home-subtitle-center home-subtitle mt-4 mb-0 mx-auto"
                 >
-                  {{ employee.description }}
+                  {{ employee?.description }}
                 </p>
                 <div class="">
                   <ul class="text-white list-inline team-social mt-4 mb-0">
@@ -74,7 +74,7 @@
                     </li>
                   </ul>
                 </div>
-                <div class="mt-4">
+                <div class="mt-4" *ngIf="isMobile||isTablet">
                   <a href="#" class="btn btn-outline-white btn-round"
                     >Add Contact</a
                   >
