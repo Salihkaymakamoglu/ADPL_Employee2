@@ -17,6 +17,8 @@ export class Index2Component implements OnInit {
   // isTablet: boolean = false;
   // isDesktop: boolean = false;
   contentLoading: boolean = true;
+  idchecked: boolean = true;
+  idValid: boolean = true;
   @ViewChild('contact') contact : any;
   
   constructor(
@@ -39,7 +41,10 @@ export class Index2Component implements OnInit {
     const person = await this.employeeService.getEmployeeById(id);
     this.employee = person[0];
     this.contentLoading = false;
-    console.log(this.employee);
+    if(this.id !== this.employee?.id) {
+      this.idValid= false
+    }
+    
   }
 
   /**

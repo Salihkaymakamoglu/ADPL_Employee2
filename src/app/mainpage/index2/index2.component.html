@@ -1,119 +1,172 @@
 <!-- STRAT NAVBAR -->
-<nav
-  class="navbar navbar-expand-lg fixed-top navbar-custom sticky sticky-dark"
-  id="navbar"
-  (window:scroll)="windowScroll()"
->
-  <div class="container">
-    <a class="navbar-brand" href="#">ADPL</a>
 
-    <div >
-      <ul class="text-right list-unstyled list-inline mb-0">
-        <li class="list-inline-item text-white nav-number">
-          <span
-          *ngIf="!contentLoading"><i class="ti-mobile"></i> &nbsp;{{ "+" + employee?.countryCode + " " + employee?.phoneNumber }}
-            <div class=""></div
-          ></span>
-          <ngx-skeleton-loader animation="progress" *ngIf="contentLoading" [theme]="{'background-color': '#434854',  
-           'width':'150px' , 'height':'20px'}"></ngx-skeleton-loader>
-        </li>
-      </ul>
+<div *ngIf="idValid">
+  <nav
+    class="navbar navbar-expand-lg fixed-top navbar-custom sticky sticky-dark"
+    id="navbar"
+    (window:scroll)="windowScroll()"
+  >
+    <div class="container">
+      <a class="navbar-brand" href="#">ADPL</a>
+
+      <div>
+        <ul class="text-right list-unstyled list-inline mb-0">
+          <li class="list-inline-item text-white nav-number">
+            <span *ngIf="!contentLoading"
+              ><i class="ti-mobile"></i> &nbsp;{{
+                "+" + employee?.countryCode + " " + employee?.phoneNumber
+              }}
+              <div class=""></div
+            ></span>
+            <ngx-skeleton-loader
+              animation="progress"
+              *ngIf="contentLoading"
+              [theme]="{
+                'background-color': '#434854',
+                width: '150px',
+                height: '20px'
+              }"
+            ></ngx-skeleton-loader>
+          </li>
+        </ul>
+      </div>
     </div>
-    
-  </div>
-</nav>
-<!-- END NAVBAR -->
-<div>
-  <!-- START HOME -->
+  </nav>
+  <!-- END NAVBAR -->
+  <div class="home">
+    <!-- START HOME -->
 
-  <section class="bg-home vh-100" id="home">
-    <div class="home-center">
-      <div class="home-desc-center">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-lg-10">
-              <!-- Main İmage -->
-              <div style="margin-bottom: 1.5rem" *ngIf="!contentLoading">
-                <img
-                  [src]="employee.photo ? employee.photo : '../../../assets/images/defaultpic.webp'"
-                  alt="img"
-                  class="img-fluid rounded-circle mx-auto d-block" class="employeePhoto"
-                />
-              </div>
-              <!-- Skeleton -->
-              <ngx-skeleton-loader
-              
-                count="1"
-                appearance="circle"
-                *ngIf="contentLoading"
-                [theme]="{'background-color': '#434854',  
-                 'height':'150px', 'width':'150px' }"
-              >
-              </ngx-skeleton-loader>
-
-
-
-              <div class="text-center">
-                <h1 class="text-white home-title mb-0" *ngIf="!contentLoading" >
-                  {{ employee.firstName + " " + employee.lastName }}
-                </h1>
-                <ngx-skeleton-loader  animation="progress" *ngIf="contentLoading" [theme]="{'background-color': '#434854',  
-                'height':'20px','width':'45%', 'margin-top':'5%'}"></ngx-skeleton-loader>
-                <p *ngIf="!contentLoading"
-                  class="text-muted home-subtitle-center home-subtitle mt-0 mb-0 mx-auto"
-                >
-                  {{ employee.email }}
-                </p>
-                <br>
-                <ngx-skeleton-loader animation="progress" *ngIf="contentLoading" [theme]="{'background-color': '#434854',  
-                'height':'10px','width':'25%','margin-top':'1%'}"></ngx-skeleton-loader>
-                <p *ngIf="!contentLoading"
-                  class="text-white home-subtitle-center home-subtitle mt-4 mb-0 mx-auto"
-                >
-                  {{ employee.description }}
-                </p>
-                <br>
-                <ngx-skeleton-loader animation="progress" *ngIf="contentLoading"[theme]="{'background-color': '#434854',  
-                'height':'5px','width':'20%','margin-top':'3%'}"></ngx-skeleton-loader>
-              
-                <div class="button">
-                  <ul class="text-white list-inline team-social mt-4 mb-0">
-                    <li class="list-inline-item">
-                      <a (click)="openInNewTab(employee.facebookURL)"
-                        ><i class="ti-facebook"></i
-                      ></a>
-                    </li>
-                    <li class="list-inline-item">
-                      <a (click)="openInNewTab(employee.instagramURL)"
-                        ><i class="ti-instagram"></i
-                      ></a>
-                    </li>
-                    <li class="list-inline-item">
-                      <a (click)="openInNewTab(employee.twitterURL)"
-                        ><i class="ti-twitter-alt"></i
-                      ></a>
-                    </li>
-                    <li class="list-inline-item">
-                      <a (click)="openInNewTab(employee.linkedinURL)"
-                        ><i class="ti-linkedin"></i
-                      ></a>
-                    </li>
-                  </ul>
+    <section class="bg-home" id="home">
+      <div class="home-center">
+        <div class="home-desc-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-10">
+                <!-- Main İmage -->
+                <div style="margin-bottom: 1.5rem" *ngIf="!contentLoading">
+                  <img
+                    [src]="
+                      employee.photo
+                        ? employee.photo
+                        : '../../../assets/images/defaultpic.webp'
+                    "
+                    alt="img"
+                    class="img-fluid rounded-circle mx-auto d-block"
+                    class="employeePhoto"
+                  />
                 </div>
-                <div class="mt-4">
-                  <a (click)="goToBottom()" class="btn btn-outline-white btn-round"
-                    >Add Contact</a
+                <!-- Skeleton -->
+                <ngx-skeleton-loader
+                  count="1"
+                  appearance="circle"
+                  *ngIf="contentLoading"
+                  [theme]="{
+                    'background-color': '#434854',
+                    height: '150px',
+                    width: '150px'
+                  }"
+                >
+                </ngx-skeleton-loader>
+
+                <div class="text-center">
+                  <h1
+                    class="text-white home-title mb-0"
+                    *ngIf="!contentLoading"
                   >
+                    {{ employee.firstName + " " + employee.lastName }}
+                  </h1>
+                  <ngx-skeleton-loader
+                    animation="progress"
+                    *ngIf="contentLoading"
+                    [theme]="{
+                      'background-color': '#434854',
+                      height: '20px',
+                      width: '45%',
+                      'margin-top': '5%'
+                    }"
+                  ></ngx-skeleton-loader>
+                  <p
+                    *ngIf="!contentLoading"
+                    class="text-muted home-subtitle-center home-subtitle mt-0 mb-0 mx-auto"
+                  >
+                    {{ employee.email }}
+                  </p>
+                  <br />
+                  <ngx-skeleton-loader
+                    animation="progress"
+                    *ngIf="contentLoading"
+                    [theme]="{
+                      'background-color': '#434854',
+                      height: '10px',
+                      width: '25%',
+                      'margin-top': '1%'
+                    }"
+                  ></ngx-skeleton-loader>
+                  <p
+                    *ngIf="!contentLoading"
+                    class="text-white home-subtitle-center home-subtitle mt-4 mb-0 mx-auto"
+                  >
+                    {{ employee.description }}
+                  </p>
+                  <br />
+                  <ngx-skeleton-loader
+                    animation="progress"
+                    *ngIf="contentLoading"
+                    [theme]="{
+                      'background-color': '#434854',
+                      height: '5px',
+                      width: '20%',
+                      'margin-top': '3%'
+                    }"
+                  ></ngx-skeleton-loader>
+
+                  <div class="button">
+                    <ul class="text-white list-inline team-social mt-4 mb-0">
+                      <li class="list-inline-item">
+                        <a (click)="openInNewTab(employee.facebookURL)"
+                          ><i class="ti-facebook"></i
+                        ></a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a (click)="openInNewTab(employee.instagramURL)"
+                          ><i class="ti-instagram"></i
+                        ></a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a (click)="openInNewTab(employee.twitterURL)"
+                          ><i class="ti-twitter-alt"></i
+                        ></a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a (click)="openInNewTab(employee.linkedinURL)"
+                          ><i class="ti-linkedin"></i
+                        ></a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="mt-4">
+                    <a
+                      (click)="goToBottom()"
+                      class="contact-btn"
+                      class="btn btn-outline-white btn-round"
+                      >Add Contact</a
+                    >
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-  <!-- END HOME -->
+    </section>
+    <!-- END HOME -->
 
-  <app-contact #contact></app-contact>
-  <!-- <app-switcher></app-switcher> -->
+    <app-contact #contact [email]="employee?.email"></app-contact>
+    <!-- <app-switcher></app-switcher> -->
+  </div>
+</div>
+<div *ngIf="!idValid" class="notFound">
+  <h1 class="h1-nf">404</h1>
+  <h2 class="h2-nf">NOT FOUND</h2>
+  <p class="p-nf">OOPS! The page you are looking for does not exist.</p>
 </div>

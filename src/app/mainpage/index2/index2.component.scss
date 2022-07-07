@@ -6,8 +6,105 @@ div {
   cursor: pointer ;  
 }
 
+.notFound{
+  height: 100vh;
+  background: url('../../../assets/images/404.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+  
+  .h1-nf{
+    text-align: center;
+    font-size:200px;
+    padding-top: 20%;
+    opacity: 0.6;
+  }
+  .h2-nf{
+    text-align: center;
+    font-size:100px;
+    opacity: 0.6;
+
+  }
+  .p-nf{
+    text-align: center;
+    font-size:60px;
+    opacity: 0.5;
+    margin-top:80px;
+    opacity: 0.6;
+  }
 .employeePhoto{
   width:40%;
   height: 40%;
   border-radius: 50%;
 }
+
+
+
+@media screen and (max-width:1600px){
+  .employeePhoto{
+    width:25%;
+    border-radius: 50%;
+    
+  }
+  .h1-nf{
+    text-align: center;
+    font-size:100px;
+    padding-top: 15%;
+    
+    z-index: 1;
+
+  }
+  .h2-nf{
+    text-align: center;
+    font-size:40px;
+    
+
+  }
+  .p-nf{
+    text-align: center;
+    font-size:30px;
+    margin-top:30px;
+    
+  }
+}
+
+@media screen and (max-width:768px){
+  .employeePhoto{
+    width:40%;
+    border-radius: 50%;
+  }
+  .h1-nf{
+    text-align: center;
+    font-size:100px;
+    padding-top: 30%;
+  }
+}
+
+
+
+@media screen and (max-width:425px){
+  .employeePhoto{
+    width:40%;
+    border-radius: 50%;
+  }
+  .h1-nf{
+    text-align: center;
+    font-size:100px;
+    padding-top: 60%;
+  }
+  
+  .h2-nf{
+    text-align: center;
+    font-size:40px;
+    
+
+  }
+  .p-nf{
+    text-align: center;
+    font-size:30px;
+    
+  }
+
+}
+

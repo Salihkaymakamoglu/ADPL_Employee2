@@ -24,6 +24,7 @@ export class EmployeeService {
         .collection("employee", (ref) => ref.where("id", "==", id)).valueChanges()
         .subscribe((employee) =>{
           resolve(employee);
+          
         }) ;
         
     });
