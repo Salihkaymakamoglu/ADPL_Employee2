@@ -20,9 +20,9 @@
     "@angular/platform-browser-dynamic": "~13.0.0",
     "@angular/router": "~13.0.0",
     "@nguniversal/express-engine": "^12.0.2",
+    "browserslist": "^4.21.1",
     "firebase": "^9.1.0",
     "ngx-content-loading": "^0.2.1",
-    "ngx-device-detector": "^2.1.0",
     "ngx-skeleton-loader": "^5.0.0",
     "rxfire": "^6.0.0",
     "rxjs": "~7.4.0",
@@ -30,7 +30,7 @@
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~13.0.4",
+    "@angular-devkit/build-angular": "^13.0.4",
     "@angular/cli": "~13.0.4",
     "@angular/compiler-cli": "~13.0.0",
     "@types/express": "^4.17.13",

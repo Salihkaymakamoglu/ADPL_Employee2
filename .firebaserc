@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "adpl-employee"
+  },
+  "targets": {
+    "adpl-employee": {
+      "hosting": {
+        "adpl-employee": [
+          "adpl-employee"
+        ]
+      }
+    }
+  }
+}
