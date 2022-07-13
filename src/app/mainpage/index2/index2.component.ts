@@ -1,7 +1,6 @@
 import { Component, OnInit, ViewChild , AfterViewInit, ElementRef } from '@angular/core';"@angular/core";
 import { EmployeeService } from "src/app/employees-list/employees/employees.service";
 import { ActivatedRoute } from "@angular/router";
-import { ContactComponent } from 'src/app/shared/contact/contact.component';
 // import { DeviceDetectorService } from "ngx-device-detector";
 
 @Component({
