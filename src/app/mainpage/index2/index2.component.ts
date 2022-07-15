@@ -1,4 +1,11 @@
-import { Component, OnInit, ViewChild , AfterViewInit, ElementRef } from '@angular/core';"@angular/core";
+import {
+  Component,
+  OnInit,
+  ViewChild,
+  AfterViewInit,
+  ElementRef,
+} from "@angular/core";
+("@angular/core");
 import { EmployeeService } from "src/app/employees-list/employees/employees.service";
 import { ActivatedRoute } from "@angular/router";
 // import { DeviceDetectorService } from "ngx-device-detector";
@@ -18,14 +25,14 @@ export class Index2Component implements OnInit {
   contentLoading: boolean = true;
   idchecked: boolean = true;
   idValid: boolean = true;
-  @ViewChild('contact') contact : any;
-  
+  @ViewChild("contact") contact: any;
+
   constructor(
     private employeeService: EmployeeService,
-    private route: ActivatedRoute,
-    // private deviceService: DeviceDetectorService
-  ) {
-  //   this.epicFunction();
+    private route: ActivatedRoute
+  ) // private deviceService: DeviceDetectorService
+  {
+    //   this.epicFunction();
   }
 
   currentSection = "home";
@@ -34,43 +41,42 @@ export class Index2Component implements OnInit {
     this.id = this.route.snapshot.paramMap.get("id");
     this.getEmployeeById(this.id);
   }
-  
 
   async getEmployeeById(id: string): Promise<any> {
     const person = await this.employeeService.getEmployeeById(id);
     this.employee = person[0];
     this.contentLoading = false;
-    if(this.id !== this.employee?.id) {
-      this.idValid= false
+    if (this.id !== this.employee?.id) {
+      this.idValid = false;
     }
-    
   }
 
   /**
    * Window scroll method
    */
   // tslint:disable-next-line: typedef
-  windowScroll() {
-    const navbar: any = document.getElementById("navbar");
-    if (
-      document.body.scrollTop > 40 ||
-      document.documentElement.scrollTop > 40
-    ) {
-      navbar.style.backgroundColor = "#1a1a1a";
-      navbar.style.padding = "15px 0px";
-    } else {
-      navbar.style.backgroundColor = "";
-      navbar.style.padding = "20px";
-    }
-  }
+  // windowScroll() {
+  //   const navbar: any = document.getElementById("navbar");
+  //   if (
+  //     document.body.scrollTop > 40 ||
+  //     document.documentElement.scrollTop > 40
+  //   ) {
+  //     navbar.style.backgroundColor = "#1a1a1a";
+  //     navbar.style.padding = "15px 0px";
+  //   } else {
+  //     navbar.style.backgroundColor = "";
+  //     navbar.style.padding = "20px";
+  //   }
+  // }
 
   goToBottom() {
     this.contact.goToBottom();
   }
 
-
   openInNewTab(url: string): void {
-    window.open(url);
+    if (url) {
+      window.open(url);
+    }
   }
 
   // epicFunction() {

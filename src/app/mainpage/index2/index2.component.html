@@ -4,10 +4,9 @@
   <nav
     class="navbar navbar-expand-lg fixed-top navbar-custom sticky sticky-dark"
     id="navbar"
-    (window:scroll)="windowScroll()"
   >
     <div class="container">
-      <p class="navbar-brand" >ADPL</p>
+      <p class="navbar-brand">ADPL</p>
 
       <div>
         <ul class="text-right list-unstyled list-inline mb-0">
@@ -68,12 +67,21 @@
                 >
                 </ngx-skeleton-loader>
 
-                <div class="text-center">
+                <div
+                  class="text-center"
+                  style="display: flex; flex-direction: column"
+                >
                   <h1
                     class="text-white home-title mb-0"
                     *ngIf="!contentLoading"
                   >
-                    {{ employee.firstName + " " + employee.lastName }}
+                    {{
+                      employee?.title +
+                        " " +
+                        employee.firstName +
+                        " " +
+                        employee.lastName
+                    }}
                   </h1>
                   <ngx-skeleton-loader
                     animation="progress"
@@ -91,7 +99,7 @@
                   >
                     {{ employee.email }}
                   </p>
-                  <br />
+                  <!-- <br /> -->
                   <ngx-skeleton-loader
                     animation="progress"
                     *ngIf="contentLoading"
@@ -104,9 +112,15 @@
                   ></ngx-skeleton-loader>
                   <p
                     *ngIf="!contentLoading"
-                    class="text-white home-subtitle-center home-subtitle mt-4 mb-0 mx-auto"
+                    class="text-white home-subtitle-center home-subtitle mt-3 mb-0 mx-auto"
                   >
-                    {{ employee.description }}
+                    {{ employee?.position }}
+                  </p>
+                  <p
+                    *ngIf="!contentLoading"
+                    class="text-white home-subtitle-center home-subtitle mb-0 mx-auto"
+                  >
+                    {{ employee?.qualification }}
                   </p>
                   <br />
                   <ngx-skeleton-loader
@@ -115,13 +129,22 @@
                     [theme]="{
                       'background-color': '#434854',
                       height: '5px',
-                      width: '20%',
-                      'margin-top': '3%'
+                      width: '20%'
+                    }"
+                  ></ngx-skeleton-loader>
+
+                  <ngx-skeleton-loader
+                    animation="progress"
+                    *ngIf="contentLoading"
+                    [theme]="{
+                      'background-color': '#434854',
+                      height: '5px',
+                      width: '20%'
                     }"
                   ></ngx-skeleton-loader>
 
                   <div class="button">
-                    <ul class="text-white list-inline team-social mt-4 mb-0">
+                    <ul class="text-white list-inline team-social mt-1 mb-0">
                       <li class="list-inline-item">
                         <a (click)="openInNewTab(employee.facebookURL)"
                           ><i class="ti-facebook"></i
@@ -149,7 +172,7 @@
                       (click)="goToBottom()"
                       class="contact-btn"
                       class="btn btn-outline-white btn-round"
-                      >Add Contact</a
+                      >Get In Touch</a
                     >
                   </div>
                 </div>

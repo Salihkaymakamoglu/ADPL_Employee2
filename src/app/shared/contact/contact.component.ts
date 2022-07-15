@@ -15,11 +15,12 @@ export class ContactComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   goToBottom() {
-    window.scrollTo(0, document.body.scrollHeight);
-    this.name.nativeElement.focus();
+    // window.scrollTo(0, document.body.scrollHeight);
+    this.name.nativeElement.scrollIntoView({
+      behavior: "smooth",
+    });
   }
 }
