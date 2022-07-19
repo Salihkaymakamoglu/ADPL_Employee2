@@ -5,11 +5,11 @@ import { Index2Component } from './index2/index2.component';
 
 
 const routes: Routes = [
-    // {
-    //     path: '',
-    //     redirectTo: ':id',
-    //     pathMatch: 'full'
-    // },
+    {
+        path: '',
+        redirectTo: 'adpl',
+        pathMatch: 'full'
+    },
     {
         path: ':id',
         component: Index2Component
