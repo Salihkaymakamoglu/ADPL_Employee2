@@ -44,12 +44,15 @@
                 <!-- Main İmage -->
                 <div
                   style="margin-bottom: 1.5rem"
-                  *ngIf="!contentLoading && employee?.photo"
+                  *ngIf="
+                    !contentLoading &&
+                    (employee?.photo || employee?.photo == '')
+                  "
+                  [@inAnimation]
                 >
                   <img
-                  importance="low"
                     alt="img"
-                    class="employeePhoto"
+                    id="employeePhoto"
                     [src]="
                       employee.photo
                         ? employee.photo
@@ -62,6 +65,7 @@
                   count="1"
                   appearance="circle"
                   *ngIf="contentLoading && !employee?.photo"
+                  [@outAnimation]
                   [theme]="{
                     'background-color': '#434854',
                     height: '150px',

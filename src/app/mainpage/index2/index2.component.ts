@@ -8,17 +8,33 @@ import {
 ("@angular/core");
 import { EmployeeService } from "src/app/employees-list/employees/employees.service";
 import { ActivatedRoute } from "@angular/router";
+import { trigger, transition, style, animate } from "@angular/animations";
 // import { DeviceDetectorService } from "ngx-device-detector";
 
 @Component({
   selector: "app-index2",
   templateUrl: "./index2.component.html",
   styleUrls: ["./index2.component.scss"],
+  animations: [
+    trigger("outAnimation", [
+      transition(":leave", [
+        style({ opacity: 1 }),
+        animate("750ms", style({ opacity: 0 })),
+      ]),
+    ]),
+    trigger("inAnimation", [
+      transition(":enter", [
+        style({ display: "none" }),
+        animate("750ms", style({ display: "block" })),
+      ]),
+    ]),
+  ],
 })
 export class Index2Component implements OnInit {
   id: any;
   employee: any;
   deviceInfo: any;
+  title = "ngifAnimation";
   // isMobile: boolean = false;
   // isTablet: boolean = false;
   // isDesktop: boolean = false;
@@ -29,9 +45,8 @@ export class Index2Component implements OnInit {
 
   constructor(
     private employeeService: EmployeeService,
-    private route: ActivatedRoute
-  ) // private deviceService: DeviceDetectorService
-  {
+    private route: ActivatedRoute // private deviceService: DeviceDetectorService
+  ) {
     //   this.epicFunction();
   }
 

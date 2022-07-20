@@ -32,7 +32,7 @@ div {
   margin-top: 80px;
   opacity: 0.6;
 }
-.employeePhoto {
+#employeePhoto {
   image-rendering: auto;
   width: 150px;
   height: 150px;
@@ -49,9 +49,7 @@ div {
 }
 
 @media screen and (max-width: 1600px) {
-  .employeePhoto {
-    width: 25%;
-  }
+  
   .h1-nf {
     text-align: center;
     font-size: 100px;
@@ -71,9 +69,7 @@ div {
 }
 
 @media screen and (max-width: 768px) {
-  .employeePhoto {
-    width: 40%;
-  }
+
   .h1-nf {
     text-align: center;
     font-size: 100px;
@@ -82,9 +78,7 @@ div {
 }
 
 @media screen and (max-width: 425px) {
-  .employeePhoto {
-    width: 40%;
-  }
+
   .h1-nf {
     text-align: center;
     font-size: 100px;
