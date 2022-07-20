@@ -35,30 +35,33 @@
   <div class="home">
     <!-- START HOME -->
 
-    <section class="bg-home" id="home">
+    <section class="bg-home" id="home" style="position: relative">
       <div class="home-center">
         <div class="home-desc-center">
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-lg-10">
                 <!-- Main İmage -->
-                <div style="margin-bottom: 1.5rem" *ngIf="!contentLoading">
+                <div
+                  style="margin-bottom: 1.5rem"
+                  *ngIf="!contentLoading && employee?.photo"
+                >
                   <img
+                  importance="low"
+                    alt="img"
+                    class="employeePhoto"
                     [src]="
                       employee.photo
                         ? employee.photo
                         : '../../../assets/images/defaultpic.webp'
                     "
-                    alt="img"
-                    class="img-fluid rounded-circle mx-auto d-block"
-                    class="employeePhoto"
                   />
                 </div>
                 <!-- Skeleton -->
                 <ngx-skeleton-loader
                   count="1"
                   appearance="circle"
-                  *ngIf="contentLoading"
+                  *ngIf="contentLoading && !employee?.photo"
                   [theme]="{
                     'background-color': '#434854',
                     height: '150px',
@@ -177,38 +180,37 @@
                   </div>
                 </div>
               </div>
-              <div class="location">
-                <span
-                  *ngIf="!contentLoading"
-                  class="text-muted home-subtitle-center home-subtitle"
-                  ><i class="ti-location-pin"></i> &nbsp;{{
-                     employee?.address
-                  }}
-                </span>
-                <ngx-skeleton-loader
-                  animation="progress"
-                  *ngIf="contentLoading"
-                  [theme]="{
-                    'background-color': '#434854',
-                    width: '300px',
-                    height: '10px',
-                    bottom: '35px'
-                  }"
-                ></ngx-skeleton-loader>
-                <ngx-skeleton-loader
-                  animation="progress"
-                  *ngIf="contentLoading"
-                  [theme]="{
-                    'background-color': '#434854',
-                    width: '150px',
-                    height: '10px',
-                    bottom: '35px'
-                  }"
-                ></ngx-skeleton-loader>
-              </div>
             </div>
           </div>
         </div>
+      </div>
+
+      <div class="location">
+        <span
+          *ngIf="!contentLoading"
+          class="text-muted home-subtitle-center home-subtitle"
+          ><i class="ti-location-pin"></i> &nbsp;{{ employee?.address }}
+        </span>
+        <ngx-skeleton-loader
+          animation="progress"
+          *ngIf="contentLoading"
+          [theme]="{
+            'background-color': '#434854',
+            width: '300px',
+            height: '10px',
+            bottom: '35px'
+          }"
+        ></ngx-skeleton-loader>
+        <ngx-skeleton-loader
+          animation="progress"
+          *ngIf="contentLoading"
+          [theme]="{
+            'background-color': '#434854',
+            width: '150px',
+            height: '10px',
+            bottom: '35px'
+          }"
+        ></ngx-skeleton-loader>
       </div>
     </section>
     <!-- END HOME -->
