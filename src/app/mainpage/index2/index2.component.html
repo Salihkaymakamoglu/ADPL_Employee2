@@ -6,7 +6,9 @@
     id="navbar"
   >
     <div class="container">
-      <p class="navbar-brand">ADPL</p>
+      <p class="navbar-brand" style="margin: 0">
+        {{ employee?.isPayroll ? "Payroll as you go" : "ADPL" }}
+      </p>
 
       <div>
         <ul class="text-right list-unstyled list-inline mb-0">
