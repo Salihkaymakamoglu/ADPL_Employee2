@@ -12,6 +12,7 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { environment } from '../environments/environment';
 import { EmployeeListComponent } from './employees-list/employees-list.component';
+import { ThankYouPageComponent } from './thank-you-page/thank-you-page.component';
 
 
 

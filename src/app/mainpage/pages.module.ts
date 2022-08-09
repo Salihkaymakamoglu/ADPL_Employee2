@@ -8,10 +8,12 @@ import { SharedModule } from "../shared/shared.module";
 
 import { Index2Component } from "./index2/index2.component";
 import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
+import { ThankYouPageComponent } from "../thank-you-page/thank-you-page.component";
 
 @NgModule({
   declarations: [
     Index2Component,
+    ThankYouPageComponent
  
   ],
   imports: [
@@ -19,6 +21,7 @@ import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
     SharedModule,
     PagesRoutingModule,
     NgxSkeletonLoaderModule
+
   ],
 })
 export class PagesModule {}
