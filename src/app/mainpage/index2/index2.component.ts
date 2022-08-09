@@ -43,6 +43,8 @@ export class Index2Component implements OnInit {
   idValid: boolean = true;
   @ViewChild("contact") contact: any;
 
+  location = window.location
+
   constructor(
     private employeeService: EmployeeService,
     private route: ActivatedRoute // private deviceService: DeviceDetectorService

@@ -1,20 +1,36 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>ADPL</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <head>
+    <meta charset="utf-8" />
+    <title id="pageTitle">Welcome</title>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
 
-  <!-- Bootstrap Css-->
-  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />
+    <!-- Bootstrap Css-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/css/bootstrap.min.css"
+    />
 
-  <link href="assets/css/style.css" rel="stylesheet" type="text/css"/>
-  <link rel="stylesheet" type="text/css" href="assets/css/colors/pink.css" id="color-opt" />
-
-</head>
-<body>
-  <app-root></app-root>
-</body>
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/css/colors/pink.css"
+      id="color-opt"
+    />
+  </head>
+  <body>
+    <app-root></app-root>
+  </body>
 </html>
+
+<script>
+  if (location.href.startsWith("https://payrollasyougo.co.uk/")) {
+    document.getElementById("pageTitle").innerHTML = "Payroll As You Go";
+  } else {
+    document.getElementById("pageTitle").innerHTML = "ADPL";
+  }
+</script>
