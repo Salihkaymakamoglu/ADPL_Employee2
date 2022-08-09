@@ -174,7 +174,7 @@ li:nth-child(10){
   margin-bottom: 20px;
 }
 
-button {
+a {
   border: none;
   color: white;
   cursor: pointer;
@@ -183,7 +183,7 @@ button {
   background-color: #019871;
   text-shadow: 0 1px rgba(128, 128, 128, 0.75);
   text-align: center}
-button:hover {
+a:hover {
   background-color: #85ddbf;
 }
 @media screen and (max-width: 768px) {

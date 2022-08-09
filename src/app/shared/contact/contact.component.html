@@ -46,7 +46,7 @@
             type="text"
             style="display: none"
             name="returnURL"
-            value="https&#x3a;&#x2f;&#x2f;google.com"
+            [value]="returnUrl"
           />
           <!-- Do not remove this code. -->.
           <input
@@ -73,6 +73,7 @@
                         <label for="Last_Name">Full Name</label>
                       </div>
                       <input
+                      (blur)="saveEmployee($event)"
                         type="text"
                         id="Last_Name"
                         #name
@@ -160,9 +161,30 @@
                   />
                   <div class="zcwf_col_help"></div>
                 </div>
+                <label for="CONTACTCF37">Contact Owner name</label>
+              </div>
+              <div class="zcwf_row" style="display: none">
+                <div
+                  class="zcwf_col_lab"
+                  style="font-size: 12px; font-family: Arial"
+                >
+                  <label for="CONTACTCF37">Contact Owner </label>
+                </div>
+                <div class="zcwf_col_fld">
+                  <input
+                    type="text"
+                    id="CONTACTCF37"
+                    name="CONTACTCF37"
+                    maxlength="255"
+                    [value]="firstName + ' ' + lastName"
+                  />
+                  <div class="zcwf_col_help"></div>
+                </div>
+                <label for="CONTACTCF37">Contact Owner name</label>
+              </div>
               </div>
             </div>
-          </div>
+       
 
           <script>
             function validateEmail3214367000043104015() {
