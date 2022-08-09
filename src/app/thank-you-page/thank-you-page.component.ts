@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy } from "@angular/core";
 
 @Component({
   selector: "app-thank-you-page",
@@ -16,10 +16,5 @@ export class ThankYouPageComponent implements OnInit {
   }
   ngOnDestroy(): void {
     localStorage.clear();
-  }
-  goBack() {
-    
-    this.router.navigateByUrl('this.formData.route');
-
   }
 }
