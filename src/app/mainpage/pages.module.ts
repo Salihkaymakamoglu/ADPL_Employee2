@@ -9,6 +9,7 @@ import { SharedModule } from "../shared/shared.module";
 import { Index2Component } from "./index2/index2.component";
 import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 import { ThankYouPageComponent } from "../thank-you-page/thank-you-page.component";
+import { NgxVcardModule } from "ngx-vcard";
 
 @NgModule({
   declarations: [
@@ -20,8 +21,8 @@ import { ThankYouPageComponent } from "../thank-you-page/thank-you-page.componen
     CommonModule,
     SharedModule,
     PagesRoutingModule,
-    NgxSkeletonLoaderModule
-
+    NgxSkeletonLoaderModule,
+    NgxVcardModule
   ],
 })
 export class PagesModule {}

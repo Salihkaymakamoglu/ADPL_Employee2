@@ -13,6 +13,7 @@ import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { environment } from '../environments/environment';
 import { EmployeeListComponent } from './employees-list/employees-list.component';
 import { ThankYouPageComponent } from './thank-you-page/thank-you-page.component';
+import { NgxVcardModule } from 'ngx-vcard';
 
 
 
@@ -29,7 +30,7 @@ import { ThankYouPageComponent } from './thank-you-page/thank-you-page.component
     BrowserAnimationsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
-   
+    NgxVcardModule
   ],
   bootstrap: [AppComponent]
 })

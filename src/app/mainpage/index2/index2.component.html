@@ -7,7 +7,11 @@
   >
     <div class="container">
       <p class="navbar-brand" style="margin: 0">
-        {{ location?.href?.startsWith('https://payrollasyougo.co.uk/') ? 'Payroll As You Go' : 'ADPL' }}
+        {{
+          location?.href?.startsWith("https://payrollasyougo.co.uk/")
+            ? "Payroll As You Go"
+            : "ADPL"
+        }}
       </p>
 
       <div>
@@ -177,12 +181,14 @@
                     </ul>
                   </div>
                   <div class="mt-4">
-                    <a
-                      (click)="goToBottom()"
-                      class="contact-btn"
-                      class="btn btn-outline-white btn-round"
-                      >Get In Touch</a
+                    <button
+                      id="downloadButtonFunction"
+                      vcdDownloadVCard
+                      [generateVCardFunction]="generateVCardOnTheFly"
+                      class="btn btn-outline-white btn-round contact-btn"
                     >
+                      Add to Contact
+                    </button>
                   </div>
                 </div>
               </div>
@@ -221,7 +227,12 @@
     </section>
     <!-- END HOME -->
 
-    <app-contact #contact [email]="employee?.email" [firstName]="employee?.firstName" [lastName]="employee?.lastName"></app-contact>
+    <app-contact
+      #contact
+      [email]="employee?.email"
+      [firstName]="employee?.firstName"
+      [lastName]="employee?.lastName"
+    ></app-contact>
     <!-- <app-switcher></app-switcher> -->
   </div>
 </div>

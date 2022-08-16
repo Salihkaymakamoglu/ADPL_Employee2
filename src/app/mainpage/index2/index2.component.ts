@@ -10,6 +10,8 @@ import { EmployeeService } from "src/app/employees-list/employees/employees.serv
 import { ActivatedRoute } from "@angular/router";
 import { trigger, transition, style, animate } from "@angular/animations";
 // import { DeviceDetectorService } from "ngx-device-detector";
+import { VCard } from "ngx-vcard";
+import { FirebaseApp } from "@angular/fire/compat";
 
 @Component({
   selector: "app-index2",
@@ -43,7 +45,9 @@ export class Index2Component implements OnInit {
   idValid: boolean = true;
   @ViewChild("contact") contact: any;
 
-  location = window.location
+  location = window.location;
+
+  imageData: any = "";
 
   constructor(
     private employeeService: EmployeeService,
@@ -53,6 +57,8 @@ export class Index2Component implements OnInit {
   }
 
   currentSection = "home";
+
+  storageRef: any;
 
   ngOnInit() {
     this.id = this.route.snapshot.paramMap.get("id");
@@ -66,6 +72,15 @@ export class Index2Component implements OnInit {
     if (this.id !== this.employee?.id) {
       this.idValid = false;
     }
+
+    // this.storageRef =this.firebase.storage().ref().child(this.employee.photo);
+
+    // console.log(this.storageRef)
+    // if (this.employee.photo) {
+    //   this.toDataURL(this.employee.photo, function (dataUrl: any) {
+    //     console.log(dataUrl);
+    //   });
+    // }
   }
 
   /**
@@ -95,6 +110,27 @@ export class Index2Component implements OnInit {
       window.open(url);
     }
   }
+
+  public generateVCardOnTheFly = (): any => {
+    if (this.employee) {
+      return {
+        name: {
+          firstNames: this.employee.firstName,
+          lastNames: this.employee.lastName,
+        },
+        // photo: {
+        //   value: this.imageData,
+        // },
+        address: [{ street: this.employee.address }],
+        email: [this.employee.email],
+        title: this.employee.position,
+        url: this.location.href,
+        telephone: [
+          "+" + this.employee.countryCode + this.employee.phoneNumber,
+        ],
+      };
+    }
+  };
 
   // epicFunction() {
   //   console.log("hello `Home` component");
