@@ -14,6 +14,7 @@ import { environment } from '../environments/environment';
 import { EmployeeListComponent } from './employees-list/employees-list.component';
 import { ThankYouPageComponent } from './thank-you-page/thank-you-page.component';
 import { NgxVcardModule } from 'ngx-vcard';
+import { NzModalModule } from 'ng-zorro-antd/modal';
 
 
 
@@ -30,7 +31,8 @@ import { NgxVcardModule } from 'ngx-vcard';
     BrowserAnimationsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
-    NgxVcardModule
+    NgxVcardModule,
+    NzModalModule
   ],
   bootstrap: [AppComponent]
 })

@@ -11,8 +11,6 @@ import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 import { ThankYouPageComponent } from "../thank-you-page/thank-you-page.component";
 import { NgxVcardModule } from "ngx-vcard";
 
-import { NzModalModule } from 'ng-zorro-antd/modal';
-
 @NgModule({
   declarations: [
     Index2Component,
@@ -25,7 +23,7 @@ import { NzModalModule } from 'ng-zorro-antd/modal';
     PagesRoutingModule,
     NgxSkeletonLoaderModule,
     NgxVcardModule,
-    NzModalModule
+   
   ],
 })
 export class PagesModule {}

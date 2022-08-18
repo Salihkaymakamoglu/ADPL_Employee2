@@ -12,6 +12,7 @@ import { trigger, transition, style, animate } from "@angular/animations";
 // import { DeviceDetectorService } from "ngx-device-detector";
 import { VCard } from "ngx-vcard";
 import { FirebaseApp } from "@angular/fire/compat";
+import { ModalService } from "src/app/shared/services/modal.service";
 
 @Component({
   selector: "app-index2",
@@ -33,7 +34,6 @@ import { FirebaseApp } from "@angular/fire/compat";
   ],
 })
 export class Index2Component implements OnInit {
-  isVisible = false;
   id: any;
   employee: any;
   deviceInfo: any;
@@ -52,7 +52,8 @@ export class Index2Component implements OnInit {
 
   constructor(
     private employeeService: EmployeeService,
-    private route: ActivatedRoute // private deviceService: DeviceDetectorService
+    private route: ActivatedRoute,
+    private modalService: ModalService // private deviceService: DeviceDetectorService
   ) {
     //   this.epicFunction();
   }
@@ -69,6 +70,12 @@ export class Index2Component implements OnInit {
   async getEmployeeById(id: string): Promise<any> {
     const person = await this.employeeService.getEmployeeById(id);
     this.employee = person[0];
+
+    this.modalService.modalData.next({
+      status: false,
+      employee: this.employee,
+    });
+
     this.contentLoading = false;
     if (this.id !== this.employee?.id) {
       this.idValid = false;
@@ -145,13 +152,9 @@ export class Index2Component implements OnInit {
   //   console.log(this.isDesktop); // returns if the app is running on a Desktop browser.
   // }
   showModal(): void {
-    this.isVisible = true;
-  }
-
-
-
-  handleCancel(): void {
-    console.log('Button cancel clicked!');
-    this.isVisible = false;
+    this.modalService.modalData.next({
+      status: true,
+      employee: this.employee,
+    });
   }
 }

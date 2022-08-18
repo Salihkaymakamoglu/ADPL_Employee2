@@ -1,4 +1,28 @@
 <!-- Loader -->
 
+
+<nz-modal
+  [(nzVisible)]="isVisible"
+  [nzContent]="modalContent"
+  [nzFooter]="null"
+  [nzCentered]="true"
+  (nzOnCancel)="handleCancel()"
+>
+  <ng-template #modalContent>
+    <div class="d-flex justify-content-center">
+      <img
+      alt="img"
+      class="qr-modal"
+      id="employeePhoto"
+      [src]="employee.qrCode"
+    />
+      
+    </div>
+    
+  </ng-template>
+</nz-modal>
+
 <router-outlet></router-outlet>
+
+
 
