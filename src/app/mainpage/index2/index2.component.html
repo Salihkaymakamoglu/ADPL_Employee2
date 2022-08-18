@@ -6,7 +6,7 @@
     id="navbar"
   >
     <div class="container">
-      <p class="navbar-brand" style="margin: 0">
+      <p class="navbar-brand white" style="margin: 0">
         {{
           location?.href?.startsWith("https://payrollasyougo.co.uk/")
             ? "Payroll As You Go"
@@ -28,8 +28,9 @@
               *ngIf="contentLoading"
               [theme]="{
                 'background-color': '#434854',
-                width: '150px',
-                height: '20px'
+                width: '125px',
+                height: '20px',
+                margin:' 5px 0px 0px 0px'
               }"
             ></ngx-skeleton-loader>
           </li>
