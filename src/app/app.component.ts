@@ -18,8 +18,10 @@ export class AppComponent {
 
   ngOnInit() {
     this.subscription$ = this.modalService.modalData.subscribe((val) => {
-      this.isVisible = val.status;
-      this.employee = val.employee;
+      if (val) {
+        this.isVisible = val.status;
+        this.employee = val.employee;
+      }
     });
   }
 
