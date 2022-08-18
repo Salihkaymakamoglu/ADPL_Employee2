@@ -12,4 +12,5 @@ export class Employee {
     twitterURL: string | undefined;
     photo: string | undefined;
     address: string | undefined;
+    qrCode: string | undefined;
 }

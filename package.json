@@ -23,6 +23,7 @@
     "@nguniversal/express-engine": "^12.0.2",
     "browserslist": "^4.21.1",
     "firebase": "^9.1.0",
+    "ng-zorro-antd": "^13.4.0",
     "ngx-content-loading": "^0.2.1",
     "ngx-skeleton-loader": "^5.0.0",
     "ngx-vcard": "^4.1.14",

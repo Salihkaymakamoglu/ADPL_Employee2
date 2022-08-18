@@ -2,7 +2,7 @@
 
 <div *ngIf="idValid">
   <nav
-    class="navbar navbar-expand-lg fixed-top navbar-custom sticky sticky-dark"
+    class="navbar red navbar-expand-lg fixed-top navbar-custom sticky sticky-dark"
     id="navbar"
   >
     <div class="container">
@@ -95,6 +95,13 @@
                         " " +
                         employee.lastName
                     }}
+                    <img
+                    alt="QR"
+                    class="qr"
+                    id="employeePhoto"
+                    src="../../../assets/images/qr.png"
+                    (click)="showModal()"
+                  />
                   </h1>
                   <ngx-skeleton-loader
                     animation="progress"
@@ -108,7 +115,7 @@
                   ></ngx-skeleton-loader>
                   <p
                     *ngIf="!contentLoading"
-                    class="text-muted home-subtitle-center home-subtitle mt-0 mb-0 mx-auto"
+                    class="text-muted white home-subtitle-center home-subtitle mt-0 mb-0 mx-auto"
                   >
                     {{ employee.email }}
                   </p>
@@ -190,6 +197,7 @@
                       Add to Contact
                     </button>
                   </div>
+           
                 </div>
               </div>
             </div>
@@ -200,7 +208,7 @@
       <div class="location">
         <span
           *ngIf="!contentLoading"
-          class="text-muted home-subtitle-center home-subtitle"
+          class="text-muted white home-subtitle-center home-subtitle"
           ><i class="ti-location-pin"></i> &nbsp;{{ employee?.address }}
         </span>
         <ngx-skeleton-loader
@@ -241,3 +249,24 @@
   <h2 class="h2-nf">NOT FOUND</h2>
   <p class="p-nf">OOPS! The page you are looking for does not exist.</p>
 </div>
+
+<nz-modal
+  [(nzVisible)]="isVisible"
+  [nzContent]="modalContent"
+  [nzFooter]="null"
+  [nzCentered]="true"
+  (nzOnCancel)="handleCancel()"
+>
+  <ng-template #modalContent>
+    <div chess="d-flex justify-content-center">
+      <img
+      alt="img"
+      class="qr-modal"
+      id="employeePhoto"
+      [src]="employee.qrCode"
+    />
+      
+    </div>
+    
+  </ng-template>
+</nz-modal>

@@ -5,6 +5,34 @@ div {
 .button:hover {
   cursor: pointer;
 }
+.white{
+  color:white !important;
+  font-weight: 500 !important;
+}
+a{
+  color:white !important;
+}
+.ant-modal-footer{
+  display:none !important;
+}
+  
+.qr-modal{
+ 
+  height: 180px!important;
+  width: 180px!important;
+  border-radius: 0 !important;
+}
+ng-template{
+  width: 200px !important;
+}
+
+.qr{
+  height: 38px!important;
+  width: 38px !important;
+  filter: brightness(0) invert(1);
+  border-radius: 0% !important;
+  cursor: pointer;
+}
 
 .notFound {
   height: 100vh;
@@ -92,5 +120,15 @@ div {
   .p-nf {
     text-align: center;
     font-size: 30px;
+  }
+
+}
+@media screen and (max-width: 1024px) {
+  .red {
+    background-color:rgb(109, 14, 14) !important;
+  }
+  .qr{
+    height: 28px!important;
+    width: 28px !important;
   }
 }

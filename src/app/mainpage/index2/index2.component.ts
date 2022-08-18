@@ -33,6 +33,7 @@ import { FirebaseApp } from "@angular/fire/compat";
   ],
 })
 export class Index2Component implements OnInit {
+  isVisible = false;
   id: any;
   employee: any;
   deviceInfo: any;
@@ -143,4 +144,14 @@ export class Index2Component implements OnInit {
   //   console.log(this.isTablet); // returns if the device us a tablet (iPad etc)
   //   console.log(this.isDesktop); // returns if the app is running on a Desktop browser.
   // }
+  showModal(): void {
+    this.isVisible = true;
+  }
+
+
+
+  handleCancel(): void {
+    console.log('Button cancel clicked!');
+    this.isVisible = false;
+  }
 }
