@@ -188,15 +188,21 @@
                       </li>
                     </ul>
                   </div>
-                  <div class="mt-4">
+                  <div class="mt-4 d-flex column ">
                     <button
                       id="downloadButtonFunction"
                       vcdDownloadVCard
                       [generateVCardFunction]="generateVCardOnTheFly"
-                      class="btn btn-outline-white btn-round contact-btn"
+                      class="btn btn-outline-white btn-width mb-3 btn-round contact-btn"
                     >
                       Add to Contact
                     </button>
+                    <button
+                    (click)="metaClick()"
+                    class="btn btn-outline-white btn-width btn-round contact-btn"
+                  ><i class="ti-headphone-alt"></i> &nbsp;
+                    Join Meta 
+                  </button>
                   </div>
            
                 </div>

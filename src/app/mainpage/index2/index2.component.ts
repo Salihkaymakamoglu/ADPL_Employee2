@@ -13,6 +13,7 @@ import { trigger, transition, style, animate } from "@angular/animations";
 import { VCard } from "ngx-vcard";
 import { FirebaseApp } from "@angular/fire/compat";
 import { ModalService } from "src/app/shared/services/modal.service";
+import { Router } from "express";
 
 @Component({
   selector: "app-index2",
@@ -157,4 +158,8 @@ export class Index2Component implements OnInit {
       employee: this.employee,
     });
   }
+  metaClick(){
+    window.open("https://adplmeta.com",'_blank')
+  }
+
 }
