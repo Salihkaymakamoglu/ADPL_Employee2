@@ -17,10 +17,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <META HTTP-EQUIV="content-type" CONTENT="text/html;charset=UTF-8" />
         <form
-          action="https://crm.zoho.com/crm/WebToContactForm"
-          name="WebToContacts3214367000043104015"
+          action="https://crm.zoho.com/crm/WebToLeadForm"
+          name="WebToLeads3214367000046060001"
           method="POST"
-          onSubmit='javascript:document.charset="UTF-8"; return checkMandatory3214367000043104015()'
+          onSubmit='javascript:document.charset="UTF-8"; return checkMandatory3214367000046060001()'
           accept-charset="UTF-8"
         >
           <input
@@ -34,13 +34,13 @@
             type="text"
             style="display: none"
             name="xmIwtLD"
-            value="46c15bbc09b6fbff90c44c82ac30da8d26f65745b6e45e1e779c39b6ababeccc"
+            value="46c15bbc09b6fbff90c44c82ac30da8d6f191385cf930dae5d00ad799099eac0"
           />
           <input
             type="text"
             style="display: none"
             name="actionType"
-            value="Q29udGFjdHM="
+            value="TGVhZHM="
           />
           <input
             type="text"
@@ -68,12 +68,12 @@
               <div class="row">
                 <div>
                   <div class="col-lg-12 parentContainer">
-                    <div style="flex: 1;" class="noMargin-r">
+                    <div style="flex: 1" class="noMargin-r">
                       <div class="form-group mt-2">
                         <label for="Last_Name">Full Name</label>
                       </div>
                       <input
-                      (blur)="saveEmployee($event)"
+                        (blur)="saveEmployee($event)"
                         type="text"
                         id="Last_Name"
                         #name
@@ -82,7 +82,7 @@
                         class="form-control"
                       />
                     </div>
-                    <div style="flex: 1;" class="noMargin-l">
+                    <div style="flex: 1" class="noMargin-l">
                       <div class="form-group mt-2">
                         <label for="Email">Email</label>
                       </div>
@@ -162,13 +162,12 @@
                   <div class="zcwf_col_help"></div>
                 </div>
               </div>
-              </div>
             </div>
-       
+          </div>
 
           <script>
-            function validateEmail3214367000043104015() {
-              var form = document.forms["WebToContacts3214367000043104015"];
+            function validateEmail3214367000046060001() {
+              var form = document.forms["WebToLeads3214367000046060001"];
               var emailFld = form.querySelectorAll("[ftype=email]");
               var i;
               for (i = 0; i < emailFld.length; i++) {
@@ -189,15 +188,12 @@
               }
               return true;
             }
-
-            function checkMandatory3214367000043104015() {
+            function checkMandatory3214367000046060001() {
               var mndFileds = new Array("Last Name");
-              var fldLangVal = new Array("Last\x20Name");
+              var fldLangVal = new Array("Full\x20Name");
               for (i = 0; i < mndFileds.length; i++) {
                 var fieldObj =
-                  document.forms["WebToContacts3214367000043104015"][
-                    mndFileds[i]
-                  ];
+                  document.forms["WebToLeads3214367000046060001"][mndFileds[i]];
                 if (fieldObj) {
                   if (fieldObj.value.replace(/^\s+|\s+$/g, "").length == 0) {
                     if (fieldObj.type == "file") {
@@ -230,8 +226,7 @@
                   } catch (e) {}
                 }
               }
-              trackVisitor3214367000043104015();
-              if (!validateEmail3214367000043104015()) {
+              if (!validateEmail3214367000046060001()) {
                 return false;
               }
               document
@@ -239,7 +234,7 @@
                 .setAttribute("disabled", true);
             }
 
-            function tooltipShow3214367000043104015(el) {
+            function tooltipShow3214367000046060001(el) {
               var tooltip = el.nextElementSibling;
               var tooltipDisplay = tooltip.style.display;
               if (tooltipDisplay == "none") {
@@ -301,7 +296,7 @@
           <!-- Do not remove this --- Analytics Tracking code starts -->
           <script
             id="wf_anal"
-            src="https://crm.zohopublic.com/crm/WebFormAnalyticsServeServlet?rid=46c15bbc09b6fbff90c44c82ac30da8d26f65745b6e45e1e779c39b6ababecccgid392c30114201f9f33993d0bdce10419f82af4b84ca411dd67d2946265f93ca56gid5cf99212d7958dbcd176c761c6ce0a4d7e43e277bdc5d8b9c12010015418942cgid14f4ec16431e0686150daa43f3210513&tw=61690b96c1d0471b638f31426f38e68aa67fb7ed6da86f32dc10ad817fe55a0a"
+            src="https://crm.zohopublic.com/crm/WebFormAnalyticsServeServlet?rid=46c15bbc09b6fbff90c44c82ac30da8d6f191385cf930dae5d00ad799099eac0gid392c30114201f9f33993d0bdce10419f82af4b84ca411dd67d2946265f93ca56gid885e3c1045bd9bdcc91bdf30f82b5696gid14f4ec16431e0686150daa43f3210513&tw=61690b96c1d0471b638f31426f38e68aa67fb7ed6da86f32dc10ad817fe55a0a"
           ></script>
           <!-- Do not remove this --- Analytics Tracking code ends. -->
         </form>
