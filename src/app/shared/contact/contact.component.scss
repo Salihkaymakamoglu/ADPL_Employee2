@@ -13,6 +13,12 @@
   margin-left: 5px;
 }
 
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 10px;
+}
+
 @media screen and (max-width: 650px) {
   .parentContainer {
     flex-direction: column;
@@ -20,5 +26,8 @@
   .noMargin-r,
   .noMargin-l {
     margin: 0;
+  }
+  .grid-container {
+    grid-template-columns: 1fr;
   }
 }
