@@ -10,6 +10,13 @@ const routes: Routes = [
     redirectTo: "adpl",
     pathMatch: "full",
   },
+
+  {
+    path: "offices",
+    loadChildren: () =>
+      import("../offices/offices.module").then((m) => m.OfficesModule),
+  },
+
   {
     path: "thank-you-page",
     component: ThankYouPageComponent,
