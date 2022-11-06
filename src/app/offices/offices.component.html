@@ -7,14 +7,14 @@
             <div class=" mb-4 " *ngFor="let office of offices; let i=index">
               
 
-                <mat-card class="example-card" style="padding-left: 30px; padding-right: 30px;">
+                <mat-card class="example-card" style="padding-left: 30px; padding-right: 30px;" (click)="openDetails(office)">
                   <mat-card-title-group>
-                    <mat-card-title>{{offices[i].name}}</mat-card-title>
-                    <mat-card-subtitle>{{offices[i].phone}}</mat-card-subtitle>
-                    <img mat-card-sm-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
+                    <mat-card-title>{{office?.name}}</mat-card-title>
+                    <mat-card-subtitle>{{office?.phone}}</mat-card-subtitle>
+                    <img mat-card-sm-image [src]="office?.mainImage" >
                   </mat-card-title-group>
                   <mat-card-content>
-                    {{offices[i].address}}
+                    {{office?.address}}
                   </mat-card-content>
                 </mat-card>
                 

@@ -1,15 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
 
 @Component({
-  selector: 'app-office-details',
-  templateUrl: './office-details.component.html',
-  styleUrls: ['./office-details.component.scss']
+  selector: "app-office-details",
+  templateUrl: "./office-details.component.html",
+  styleUrls: ["./office-details.component.scss"],
 })
 export class OfficeDetailsComponent implements OnInit {
+  office:any;
+  constructor(private router: Router) {
+    const state = this.router.getCurrentNavigation()?.extras?.state;
+    this.office = state?.['office'];
 
-  constructor() { }
-
-  ngOnInit(): void {
+    if (!this.office) {
+      this.router.navigate(["/offices"]);
+    }
   }
 
+  ngOnInit(): void {
+    console.log(this.office)
+  }
 }

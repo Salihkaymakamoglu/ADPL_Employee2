@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { OfficesRoutingModule } from './offices-routing.module';
 import { OfficesComponent } from './offices.component';
 import {MatCardModule} from '@angular/material/card';
+import { NzCarouselModule } from 'ng-zorro-antd/carousel';
 import { OfficeDetailsComponent } from './office-details/office-details.component';
 
 
@@ -16,7 +17,8 @@ import { OfficeDetailsComponent } from './office-details/office-details.componen
   imports: [
     CommonModule,
     OfficesRoutingModule,
-    MatCardModule
+    MatCardModule,
+    NzCarouselModule
   ]
 })
 export class OfficesModule { }

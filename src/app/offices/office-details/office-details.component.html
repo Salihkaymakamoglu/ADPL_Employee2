@@ -1,1 +1,85 @@
-<p>office-details works!</p>
+<section class="bg-home" id="home" style="position: relative">
+    <div class="home-center">
+      <div class="home-desc-center">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-10">
+              <!-- Main İmage -->
+              <div
+                style="margin-bottom: 1.5rem"
+                
+              >
+              <nz-carousel nzAutoPlay>
+                <div nz-carousel-content *ngFor="let index of office.images">
+                  <img [src]="index">
+                </div>
+              </nz-carousel>
+              </div>
+          
+
+              <div
+                class="text-center"
+                style="display: flex; flex-direction: column"
+              >
+                <h1
+                  class="text-white home-title mb-0"
+              
+                >
+                  {{
+                    office?.name 
+                  }}
+                
+                </h1>
+                <p
+                class="text-white home-subtitle-center home-subtitle mt-3 mb-0 mx-auto"
+              >
+                {{ office.email }}
+              </p>
+                <p
+                  class="text-white home-subtitle-center home-subtitle mt-3 mb-0 mx-auto"
+                >
+                  {{ office.phone }}
+                </p>
+                <p
+                  class="text-white home-subtitle-center home-subtitle mt-3 mb-0 mx-auto"
+                >
+                  {{ office?.address }}
+                </p>
+              
+                <br />
+
+                <!-- <div class="button">
+                  <ul class="text-white list-inline team-social mt-1 mb-0">
+                    <li class="list-inline-item">
+                      <a (click)="openInNewTab(employee.facebookURL)"
+                        ><i class="ti-facebook"></i
+                      ></a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a (click)="openInNewTab(employee.instagramURL)"
+                        ><i class="ti-instagram"></i
+                      ></a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a (click)="openInNewTab(employee.twitterURL)"
+                        ><i class="ti-twitter-alt"></i
+                      ></a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a (click)="openInNewTab(employee.linkedinURL)"
+                        ><i class="ti-linkedin"></i
+                      ></a>
+                    </li>
+                  </ul>
+                </div> -->
+           
+         
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+  </section>
