@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, ViewChild } from "@angular/core";
 import { Router } from "@angular/router";
 
 @Component({
@@ -7,10 +7,12 @@ import { Router } from "@angular/router";
   styleUrls: ["./office-details.component.scss"],
 })
 export class OfficeDetailsComponent implements OnInit {
-  office:any;
+  office: any;
+  @ViewChild("head") head: any;
+
   constructor(private router: Router) {
     const state = this.router.getCurrentNavigation()?.extras?.state;
-    this.office = state?.['office'];
+    this.office = state?.["office"];
 
     if (!this.office) {
       this.router.navigate(["/offices"]);
@@ -18,6 +20,14 @@ export class OfficeDetailsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log(this.office)
+    console.log(this.office);
+    this.goToTop();
+  }
+
+  goToTop() {
+    window.scrollTo(0, 0);
+    // this.head.nativeElement.scrollIntoView({
+    //   behavior: "smooth",
+    // });
   }
 }
