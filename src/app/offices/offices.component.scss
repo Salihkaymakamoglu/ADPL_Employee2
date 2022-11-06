@@ -1,0 +1,22 @@
+.example-card:hover{
+    transform: scale(1.040);
+    transition:0.2s ease-in;
+    cursor: pointer;
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px !important;
+}
+
+img{
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+}
+@media screen and (max-width:1000px) {
+    .grid-container{
+        grid-template-columns: 1fr;
+    }
+    
+}

@@ -1,10 +1,28 @@
-<mat-card class="example-card">
-    <mat-card-title-group>
-      <mat-card-title>Shiba Inu</mat-card-title>
-      <mat-card-subtitle>Small</mat-card-subtitle>
-      <img mat-card-sm-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
-    </mat-card-title-group>
-    <mat-card-content>
-      {{'longText'}}
-    </mat-card-content>
-  </mat-card>
+
+  <section class="bg-home" id="home" style="position: relative">
+    <div class="home-center">
+      <div class="home-desc-center">
+        <div class="container">
+          <div class="row justify-content-center grid-container ">
+            <div class=" mb-4 " *ngFor="let office of offices; let i=index">
+              
+
+                <mat-card class="example-card" style="padding-left: 30px; padding-right: 30px;">
+                  <mat-card-title-group>
+                    <mat-card-title>{{offices[i].name}}</mat-card-title>
+                    <mat-card-subtitle>{{offices[i].phone}}</mat-card-subtitle>
+                    <img mat-card-sm-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
+                  </mat-card-title-group>
+                  <mat-card-content>
+                    {{offices[i].address}}
+                  </mat-card-content>
+                </mat-card>
+                
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
