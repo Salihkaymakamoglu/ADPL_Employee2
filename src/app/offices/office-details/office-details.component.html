@@ -1,4 +1,4 @@
-<section class="bg-home" id="home" style="position: relative">
+<section class="p-5" id="home" style="position: relative">
     <div class="home-center">
       <div class="home-desc-center">
         <div class="container">
@@ -10,7 +10,7 @@
                 
               >
               <nz-carousel nzAutoPlay>
-                <div nz-carousel-content *ngFor="let index of office.images">
+                <div class="img-container" nz-carousel-content *ngFor="let index of office.images">
                   <img [src]="index">
                 </div>
               </nz-carousel>
