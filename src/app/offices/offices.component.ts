@@ -19,7 +19,7 @@ export class OfficesComponent implements OnInit {
     },
     {
       name: "WALTHAM CROSS OFFICE",
-      address: "",
+      address: "81 Turners Hill Cheshunt, Waltham Cross, EN8 9BA",
       phone: "+44 0208 886 9222",
       email:"info@accountingdirectplus.com",
       mainImage: "",
@@ -28,7 +28,7 @@ export class OfficesComponent implements OnInit {
     },
     {
       name: "LONDON COVENT GARDEN",
-      address: "",
+      address: "50 Long Acre,London WC2E 9JR",
       phone: "+44 0208 886 9222",
       email:"info@accountingdirectplus.com",
       mainImage: "",
@@ -37,9 +37,9 @@ export class OfficesComponent implements OnInit {
     },
     {
       name: "LONDON WEYBRIDGE",
-      address: "",
-      phone: "+44 0208 886 9222",
-      email:"info@accountingdirectplus.com",
+      address: "Suite 8, The Monument, 45-47 Monument Hill, Weybridge, Surrey, KT13 8RN",
+      phone: "+44 020 3725 5990",
+      email:"info@accountingasyougo.com",
       mainImage: "",
       images: [""],
       id: "4",
@@ -47,7 +47,7 @@ export class OfficesComponent implements OnInit {
     {
       name: "ISTANBUL OFFICE",
       address: "",
-      phone: "",
+      phone: "+44 0208 886 9222",
       email:"info@accountingdirectplus.com",
       mainImage: "",
       images: [""],
@@ -56,7 +56,7 @@ export class OfficesComponent implements OnInit {
     {
       name: "DUBAI OFFICE",
       address: "",
-      phone: "",
+      phone: "+44 0208 886 9222",
       email:"info@accountingdirectplus.com",
       mainImage: "",
       images: [""],
@@ -65,7 +65,7 @@ export class OfficesComponent implements OnInit {
     {
       name: "GERMANY OFFICE",
       address: "",
-      phone: "",
+      phone: "+44 0208 886 9222",
       email:"info@accountingdirectplus.com",
       mainImage: "",
       images: [""],
@@ -75,7 +75,7 @@ export class OfficesComponent implements OnInit {
       name: "CYPRUS OFFICE",
       address: "Daire No: 3 Emtan 2 Apt, Mete Adanir Caddesi, Girne, Cyprus",
       phone: "+90 533 866 92 22",
-      email:"info@accountingdirectplus.com",
+      email:"cyprus@accountingdirectplus.com",
       mainImage: "",
       images: [""],
       id: "8",
