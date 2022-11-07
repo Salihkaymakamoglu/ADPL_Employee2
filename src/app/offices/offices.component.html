@@ -1,5 +1,5 @@
 
-  <section class="bg-home" id="home" style="position: relative">
+  <section class="bg-home" id="head" style="position: relative">
     <div class="home-center">
       <div class="home-desc-center">
         <div class="container">
@@ -11,7 +11,7 @@
                   <mat-card-title-group>
                     <mat-card-title>{{office?.name}}</mat-card-title>
                     <mat-card-subtitle>{{office?.phone}}</mat-card-subtitle>
-                    <img mat-card-sm-image [src]="office?.mainImage" >
+                    <img mat-card-sm-image alt="main-img" [src]="office?.mainImage" >
                   </mat-card-title-group>
                   <mat-card-content>
                     {{office?.address}}

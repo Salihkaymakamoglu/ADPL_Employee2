@@ -1,54 +1,48 @@
-<section class="p-5" id="home" style="position: relative">
-    <div class="home-center">
-      <div class="home-desc-center">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-lg-10">
-              <!-- Main İmage -->
-              <div
-                style="margin-bottom: 1.5rem"
-                
-              >
+<section class="p-5" #head id="head" style="position: relative">
+  <div class="home-center">
+    <div class="home-desc-center">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <!-- Main İmage -->
+            <div style="margin-bottom: 1.5rem">
               <nz-carousel nzAutoPlay>
-                <div class="img-container" nz-carousel-content *ngFor="let index of office.images">
-                  <img [src]="index">
+                <div
+                  class="img-container"
+                  nz-carousel-content
+                  *ngFor="let index of office.images"
+                >
+                  <img [src]="index" />
                 </div>
               </nz-carousel>
-              </div>
-          
+            </div>
 
-              <div
-                class="text-center"
-                style="display: flex; flex-direction: column"
-              >
-                <h1
-                  class="text-white home-title mb-0"
-              
-                >
-                  {{
-                    office?.name 
-                  }}
-                
-                </h1>
-                <p
+            <div
+              class="text-center"
+              style="display: flex; flex-direction: column"
+            >
+              <h1 class="text-white home-title mb-0">
+                {{ office?.name }}
+              </h1>
+              <p
                 class="text-white home-subtitle-center home-subtitle mt-3 mb-0 mx-auto"
               >
                 {{ office.email }}
               </p>
-                <p
-                  class="text-white home-subtitle-center home-subtitle mt-3 mb-0 mx-auto"
-                >
-                  {{ office.phone }}
-                </p>
-                <p
-                  class="text-white home-subtitle-center home-subtitle mt-3 mb-0 mx-auto"
-                >
-                  {{ office?.address }}
-                </p>
-              
-                <br />
+              <p
+                class="text-white home-subtitle-center home-subtitle mt-3 mb-0 mx-auto"
+              >
+                {{ office.phone }}
+              </p>
+              <p
+                class="text-white home-subtitle-center home-subtitle mt-3 mb-0 mx-auto"
+              >
+                {{ office?.address }}
+              </p>
 
-                <!-- <div class="button">
+              <br />
+
+              <!-- <div class="button">
                   <ul class="text-white list-inline team-social mt-1 mb-0">
                     <li class="list-inline-item">
                       <a (click)="openInNewTab(employee.facebookURL)"
@@ -72,20 +66,24 @@
                     </li>
                   </ul>
                 </div> -->
-           
-         
-              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
+</section>
 
-    
-  </section>
-  
-  <app-contact
+<app-contact
+  *ngIf="office?.id !== '8'"
   #contact
   [email]="office?.email"
   [firstName]="office?.name"
 ></app-contact>
+
+<app-contact-iasyougo
+  *ngIf="office?.id === '8'"
+  #contact1
+  [email]="office?.email"
+  [firstName]="office?.name"
+></app-contact-iasyougo>
