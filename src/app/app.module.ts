@@ -32,7 +32,8 @@ import { NzModalModule } from 'ng-zorro-antd/modal';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
     NgxVcardModule,
-    NzModalModule
+    NzModalModule,
+
   ],
   bootstrap: [AppComponent]
 })

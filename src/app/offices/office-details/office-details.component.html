@@ -1,25 +1,43 @@
 <div class="btn-container">
-  <button [routerLink]="['/offices']" routerLinkActive="router-link-active"  nz-button nzType="primary"><i class="ti-arrow-left"></i>Back</button>
+  <button
+    [routerLink]="['/offices']"
+    routerLinkActive="router-link-active"
+    nz-button
+    nzType="primary"
+  >
+    <i class="ti-arrow-left"></i>Back
+  </button>
 </div>
 
-<section class="p-5" #head id="head" style="position: relative">
+<section class="p-5" #head id="head" style="position: relative" *ngIf="office">
   <div class="home-center">
     <div class="home-desc-center">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-10">
             <!-- Main İmage -->
-            <div style="margin-bottom: 1.5rem " class="img-container">
-              <carousel [cellsToShow]="1" [loop]="true" [autoplay]="true" [autoplayInterval]="4000" [transitionDuration]="1000">
-                <div class="carousel-cell " *ngFor="let image of office.images">
-                    <img alt="img" [src]="image">
+            <!-- <div style="margin-bottom: 1.5rem " class="img-container">
+         
+
+
+
+            </div> -->
+
+            <ngb-carousel>
+              <ng-template ngbSlide *ngFor="let item of office.images">
+                <div class="picsum-img-wrapper" style="border-radius: 6px">
+                  <img [src]="item" alt="Image" style="border-radius: 6px" />
                 </div>
-            </carousel>
-            </div>
+                <!-- <div class="carousel-caption">
+                  <h3>Title Goes Here</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div> -->
+              </ng-template>
+            </ngb-carousel>
 
             <div
               class="text-center"
-              style="display: flex; flex-direction: column"
+              style="display: flex; flex-direction: column; margin-top: 24px"
             >
               <h1 class="text-white home-title mb-0">
                 {{ office?.name }}

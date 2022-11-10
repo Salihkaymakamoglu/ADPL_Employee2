@@ -1,23 +1,19 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { NgModule } from "@angular/core";
+import { CommonModule } from "@angular/common";
 
 import { SharedModule } from "../shared/shared.module";
 
-import { OfficesRoutingModule } from './offices-routing.module';
-import { OfficesComponent } from './offices.component';
-import {MatCardModule} from '@angular/material/card';
-import { NzCarouselModule } from 'ng-zorro-antd/carousel';
-import { OfficeDetailsComponent } from './office-details/office-details.component';
-import { NzButtonModule } from 'ng-zorro-antd/button';
-import {IvyCarouselModule} from 'angular-responsive-carousel';
-
+import { OfficesRoutingModule } from "./offices-routing.module";
+import { OfficesComponent } from "./offices.component";
+import { MatCardModule } from "@angular/material/card";
+import { NzCarouselModule } from "ng-zorro-antd/carousel";
+import { OfficeDetailsComponent } from "./office-details/office-details.component";
+import { NzButtonModule } from "ng-zorro-antd/button";
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
-  declarations: [
-    OfficesComponent,
-    OfficeDetailsComponent
-  ],
+  declarations: [OfficesComponent, OfficeDetailsComponent],
   imports: [
     CommonModule,
     SharedModule,
@@ -25,7 +21,7 @@ import {IvyCarouselModule} from 'angular-responsive-carousel';
     MatCardModule,
     NzCarouselModule,
     NzButtonModule,
-    IvyCarouselModule
-  ]
+    NgbModule
+  ],
 })
-export class OfficesModule { }
+export class OfficesModule {}
