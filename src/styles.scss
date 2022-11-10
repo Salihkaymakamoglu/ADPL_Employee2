@@ -16,3 +16,9 @@ mat-card {
 }
 
 
+ngb-carousel {
+  max-height: 400px;
+  img {
+    max-height: 400px;
+  }
+}
