@@ -1,8 +1,20 @@
-div {
+section {
     text-align: center;
   }
-  
- 
+  .btn-container{
+    padding-top: 10px;
+    padding-left: 10px;
+    button{
+      background-color: #593232;
+      border-radius: 4px;
+      border:none;
+    }
+  }
+
+i{
+  margin-right: 5px;
+  font-size: 12px;
+}
   .white{
     color:white !important;
     font-weight: 500 !important;
@@ -21,7 +33,13 @@ div {
     height: 100%;
     object-fit: cover;
   }
-  
+  @media screen and (max-width:600px) {
+    img{
+      width: 80%;
+      height: 80%;
+    }
+    
+  }
 
   
 

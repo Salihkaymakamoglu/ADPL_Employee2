@@ -1,3 +1,7 @@
+<div class="btn-container">
+  <button nz-button nzType="primary"><i class="ti-arrow-left"></i>Back</button>
+</div>
+
 <section class="p-5" #head id="head" style="position: relative">
   <div class="home-center">
     <div class="home-desc-center">
@@ -6,15 +10,11 @@
           <div class="col-lg-10">
             <!-- Main İmage -->
             <div style="margin-bottom: 1.5rem">
-              <nz-carousel nzAutoPlay>
-                <div
-                  class="img-container"
-                  nz-carousel-content
-                  *ngFor="let index of office.images"
-                >
-                  <img [src]="index" />
+              <carousel>
+                <div class="carousel-cell img-container" *ngFor="let image of office.images">
+                    <img alt="img" [src]="image">
                 </div>
-              </nz-carousel>
+            </carousel>
             </div>
 
             <div

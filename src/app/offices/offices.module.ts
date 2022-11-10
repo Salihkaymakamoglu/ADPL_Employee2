@@ -8,6 +8,8 @@ import { OfficesComponent } from './offices.component';
 import {MatCardModule} from '@angular/material/card';
 import { NzCarouselModule } from 'ng-zorro-antd/carousel';
 import { OfficeDetailsComponent } from './office-details/office-details.component';
+import { NzButtonModule } from 'ng-zorro-antd/button';
+import {IvyCarouselModule} from 'angular-responsive-carousel';
 
 
 
@@ -21,7 +23,9 @@ import { OfficeDetailsComponent } from './office-details/office-details.componen
     SharedModule,
     OfficesRoutingModule,
     MatCardModule,
-    NzCarouselModule
+    NzCarouselModule,
+    NzButtonModule,
+    IvyCarouselModule
   ]
 })
 export class OfficesModule { }
