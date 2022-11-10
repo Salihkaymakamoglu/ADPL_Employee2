@@ -11,16 +11,17 @@ export class OfficeDetailsComponent implements OnInit {
   @ViewChild("head") head: any;
 
   constructor(private router: Router) {
-    const state = this.router.getCurrentNavigation()?.extras?.state;
-    this.office = state?.["office"];
+    const state: any = this.router.getCurrentNavigation()?.extras?.state;
 
-    if (!this.office) {
+    if (!state) {
       this.router.navigate(["/offices"]);
+    } else {
+      this.office = state?.office;
     }
   }
 
   ngOnInit(): void {
-    console.log(this.office);
+    
     this.goToTop();
   }
 
