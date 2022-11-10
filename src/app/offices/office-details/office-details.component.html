@@ -1,5 +1,5 @@
 <div class="btn-container">
-  <button nz-button nzType="primary"><i class="ti-arrow-left"></i>Back</button>
+  <button [routerLink]="['/offices']" routerLinkActive="router-link-active"  nz-button nzType="primary"><i class="ti-arrow-left"></i>Back</button>
 </div>
 
 <section class="p-5" #head id="head" style="position: relative">
@@ -10,7 +10,7 @@
           <div class="col-lg-10">
             <!-- Main İmage -->
             <div style="margin-bottom: 1.5rem">
-              <carousel>
+              <carousel [cellsToShow]="1" [loop]="true" [autoplay]="true" [autoplayInterval]="4000">
                 <div class="carousel-cell img-container" *ngFor="let image of office.images">
                     <img alt="img" [src]="image">
                 </div>

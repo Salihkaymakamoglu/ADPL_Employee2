@@ -32,7 +32,7 @@ export class OfficesComponent implements OnInit {
       phone: "+44 0208 886 9222",
       email:"info@accountingdirectplus.com",
       mainImage: "./../../assets/images/main.jpg",
-      images: ["../../../assets/images/main.jpg","../../../assets/images/office.p.jpg"],
+      images: ["../../../assets/images/main.jpg","../../../assets/images/office.jpg"],
       id: "3",
     },
     {
