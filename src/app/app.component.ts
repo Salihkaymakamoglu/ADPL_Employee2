@@ -38,7 +38,7 @@ export class AppComponent {
             "url(../assets/images/cartographer.png)"
           );
         }
-        if (url === "/freddie-wells") {
+        if (url === "/freddie-wells" && host !== 'payrollasyougo.co.uk') {
           document.location.href = "https://payrollasyougo.co.uk/freddie-wells";
         }
       }
