@@ -10,7 +10,10 @@ section {
       border:none;
     }
   }
+.carousel-cell{
+  width: 100% !important;
 
+}
 i{
   margin-right: 5px;
   font-size: 12px;
@@ -25,8 +28,8 @@ i{
   }
   
   .img-container{
-    height: 400px;
-    width: 200px;
+    height: 70%;
+    width: 70%;
   }
   img{
     width: 100%;

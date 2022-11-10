@@ -9,9 +9,9 @@
         <div class="row justify-content-center">
           <div class="col-lg-10">
             <!-- Main İmage -->
-            <div style="margin-bottom: 1.5rem">
-              <carousel [cellsToShow]="1" [loop]="true" [autoplay]="true" [autoplayInterval]="4000">
-                <div class="carousel-cell img-container" *ngFor="let image of office.images">
+            <div style="margin-bottom: 1.5rem " class="img-container">
+              <carousel [cellsToShow]="1" [loop]="true" [autoplay]="true" [autoplayInterval]="4000" [transitionDuration]="1000">
+                <div class="carousel-cell " *ngFor="let image of office.images">
                     <img alt="img" [src]="image">
                 </div>
             </carousel>
