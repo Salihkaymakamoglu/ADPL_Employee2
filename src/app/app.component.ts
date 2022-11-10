@@ -1,4 +1,5 @@
-import { Component } from "@angular/core";
+import { Component, Renderer2 } from "@angular/core";
+import { NavigationStart, Router } from "@angular/router";
 import { Subscription } from "rxjs";
 import { ModalService } from "./shared/services/modal.service";
 
@@ -14,7 +15,35 @@ export class AppComponent {
   employee: any;
   subscription$: any;
 
-  constructor(private modalService: ModalService) {}
+  constructor(
+    private modalService: ModalService,
+    private router: Router,
+    private renderer: Renderer2
+  ) {
+    router.events.subscribe((event) => {
+      if (event instanceof NavigationStart) {
+        const host = location.host;
+        const url = event.url;
+        const body = document.getElementsByTagName("body")[0];
+        if (host === "payrollasyougo.co.uk") {
+          this.renderer.setStyle(
+            body,
+            "background",
+            "url(../assets/images/payroll.jpg)"
+          );
+        } else {
+          this.renderer.setStyle(
+            body,
+            "background",
+            "url(../assets/images/cartographer.png)"
+          );
+        }
+        if (url === "/freddie-wells") {
+          document.location.href = "https://payrollasyougo.co.uk/freddie-wells";
+        }
+      }
+    });
+  }
 
   ngOnInit() {
     this.subscription$ = this.modalService.modalData.subscribe((val) => {

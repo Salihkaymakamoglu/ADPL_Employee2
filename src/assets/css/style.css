@@ -1226,7 +1226,7 @@ b {
 }
 
 .bg-home {
-  background-image: url("../images/cartographer.png");
+  /* background-image: url("../images/cartographer.png"); */
   position: relative;
   padding: 190px 0;
 }
@@ -1445,7 +1445,7 @@ b {
 }
 
 .bg-client {
-  background-image: url("../images/cartographer.png");
+  /* background-image: url("../images/cartographer.png"); */
   position: relative;
 }
 
@@ -1539,7 +1539,7 @@ textarea.form-control {
 }
 
 .footer {
-  background-image: url("../images/cartographer.png");
+  /* background-image: url("../images/cartographer.png"); */
   position: relative;
 }
 
@@ -1573,7 +1573,7 @@ textarea.form-control {
 }
 
 .bg-login {
-  background-image: url(../images/cartographer.png);
+  /* background-image: url(../images/cartographer.png); */
   height: 100vh;
 }
 
