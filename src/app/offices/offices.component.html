@@ -1,28 +1,31 @@
-
-  <section class="bg-home" id="head" style="position: relative">
-    <div class="home-center">
-      <div class="home-desc-center">
-        <div class="container">
-          <div class="row justify-content-center grid-container ">
-            <div class=" mb-4 " *ngFor="let office of offices; let i=index">
-              
-
-                <mat-card class="example-card" style="padding-left: 30px; padding-right: 30px;" (click)="openDetails(office)">
-                  <mat-card-title-group>
-                    <mat-card-title>{{office?.name}}</mat-card-title>
-                    <mat-card-subtitle>{{office?.phone}}</mat-card-subtitle>
-                    <img mat-card-sm-image alt="main-img" [src]="office?.mainImage" >
-                  </mat-card-title-group>
-                  <mat-card-content>
-                    {{office?.address}}
-                  </mat-card-content>
-                </mat-card>
-                
-              
-            </div>
+<section class="bg-home" id="head" style="position: relative">
+  <div class="home-center">
+    <div class="home-desc-center">
+      <div class="container">
+        <div class="row justify-content-center grid-container">
+          <div class="mb-4" *ngFor="let office of offices; let i = index">
+            <mat-card
+              class="example-card"
+              style="padding-left: 30px; padding-right: 30px"
+              (click)="openDetails(office)"
+            >
+              <mat-card-title-group>
+                <mat-card-title>{{ office?.name }}</mat-card-title>
+                <mat-card-subtitle>{{ office?.phone }}</mat-card-subtitle>
+                <img
+                  style="height: 90px; width: 90px"
+                  mat-card-sm-image
+                  alt="main-img"
+                  [src]="office?.mainImage"
+                />
+              </mat-card-title-group>
+              <mat-card-content style="margin-top: 8px">
+                {{ office?.address }}
+              </mat-card-content>
+            </mat-card>
           </div>
         </div>
       </div>
     </div>
-
-  </section>
+  </div>
+</section>
