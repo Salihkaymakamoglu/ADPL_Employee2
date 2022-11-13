@@ -18,8 +18,8 @@ export class OfficesComponent implements OnInit {
       id: "1",
     },
     {
-      name: "WALTHAM CROSS OFFICE",
-      address: "81 Turners Hill Cheshunt, Waltham Cross, EN8 9BA",
+      name: "LONDON COVENT GARDEN",
+      address: "50 Long Acre,London WC2E 9JR",
       phone: "+44 0208 886 9222",
       email:"info@accountingdirectplus.com",
       mainImage: "./../../assets/images/main.jpg",
@@ -27,8 +27,8 @@ export class OfficesComponent implements OnInit {
       id: "2",
     },
     {
-      name: "LONDON COVENT GARDEN",
-      address: "50 Long Acre,London WC2E 9JR",
+      name: "WALTHAM CROSS OFFICE",
+      address: "81 Turners Hill Cheshunt, Waltham Cross, EN8 9BA",
       phone: "+44 0208 886 9222",
       email:"info@accountingdirectplus.com",
       mainImage: "./../../assets/images/main.jpg",
@@ -46,7 +46,7 @@ export class OfficesComponent implements OnInit {
     },
     {
       name: "ISTANBUL OFFICE",
-      address: "",
+      address: "İçerenköy Mah. Prof. Dr. Ali Nihat Tarlan Cad. Süleyman Başkan İş Merk. No:84 K:5 D9 Ataşehir İstanbul, Turkey",
       phone: "+44 0208 886 9222",
       email:"info@accountingdirectplus.com",
       mainImage: "./../../assets/images/main.jpg",
@@ -55,7 +55,7 @@ export class OfficesComponent implements OnInit {
     },
     {
       name: "DUBAI OFFICE",
-      address: "",
+      address: "Appointment only",
       phone: "+44 0208 886 9222",
       email:"info@accountingdirectplus.com",
       mainImage: "./../../assets/images/main.jpg",
@@ -64,7 +64,7 @@ export class OfficesComponent implements OnInit {
     },
     {
       name: "GERMANY OFFICE",
-      address: "",
+      address: "Appointment only",
       phone: "+44 0208 886 9222",
       email:"info@accountingdirectplus.com",
       mainImage: "./../../assets/images/main.jpg",
@@ -91,5 +91,10 @@ export class OfficesComponent implements OnInit {
       state: { office: offices },
     });
 
+  }
+  openInNewTab(url: string): void {
+    if (url) {
+      window.open(url);
+    }
   }
 }

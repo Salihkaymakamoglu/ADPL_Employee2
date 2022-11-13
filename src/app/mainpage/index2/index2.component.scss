@@ -64,8 +64,20 @@ ng-template{
   object-fit: cover !important;
   border-radius: 50%;
 }
- .btn-width{
-  width:fit-content;
+
+ .btn{
+  border: 2px solid white;
+  color: white;
+  font-weight: 500;
+  border-radius: 30px;
+  width: 200px;
+  height: 45px;
+ }
+ .btn:hover{
+  background-color: #434854;
+  border-color: #434854;
+  color: white;
+  transition: 0.5s ease-in-out;
  }
 .column{
   flex-direction: column;

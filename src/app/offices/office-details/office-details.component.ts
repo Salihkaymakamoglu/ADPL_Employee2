@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from "@angular/core";
 import { Router } from "@angular/router";
+import { VCard } from "ngx-vcard";
 
 @Component({
   selector: "app-office-details",
@@ -31,4 +32,25 @@ export class OfficeDetailsComponent implements OnInit {
     //   behavior: "smooth",
     // });
   }
+  metaClick(){
+    window.open("https://adplmeta.com",'_blank')
+  }
+
+  public generateVCardOnTheFly = (): any => {
+    if (this.office) {
+      return {
+        name: {
+          firstNames: this.office?.name,
+        },
+        // photo: {
+        //   value: this.imageData,
+        // },
+        address: [{ street: this.office?.address }],
+        email: [this.office?.email],
+        telephone: [
+          this.office?.phone,
+        ],
+      };
+    }
+  };
 }

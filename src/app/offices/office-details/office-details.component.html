@@ -85,7 +85,24 @@
                   </ul>
                 </div> -->
             </div>
+            <div class="mt-4 flex">
+              <button
+                id="downloadButtonFunction"
+                vcdDownloadVCard
+                [generateVCardFunction]="generateVCardOnTheFly"
+                class="btn mb-3 "
+              >
+                Add to Contact
+              </button>
+              <button
+              (click)="metaClick()"
+              class="btn"
+            ><i class="ti-headphone-alt"></i> &nbsp;
+              Join Meta 
+            </button>
+            </div>
           </div>
+       
         </div>
       </div>
     </div>

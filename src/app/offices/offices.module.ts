@@ -10,6 +10,7 @@ import { NzCarouselModule } from "ng-zorro-antd/carousel";
 import { OfficeDetailsComponent } from "./office-details/office-details.component";
 import { NzButtonModule } from "ng-zorro-antd/button";
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgxVcardModule } from "ngx-vcard";
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     MatCardModule,
     NzCarouselModule,
     NzButtonModule,
-    NgbModule
+    NgbModule,
+    NgxVcardModule
   ],
 })
 export class OfficesModule {}

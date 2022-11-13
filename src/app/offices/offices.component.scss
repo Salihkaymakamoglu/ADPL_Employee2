@@ -1,3 +1,27 @@
+.example-card{
+    background-color:rgba(0, 0, 0, 0.35);
+    border: 2px solid rgb(255, 255, 255);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.flex{
+    position:absolute;
+    bottom:40px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  
+
+}
+.white{
+    color:white !important;
+}
 .example-card:hover{
     transform: scale(1.040);
     transition:0.2s ease-in;
