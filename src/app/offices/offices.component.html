@@ -3,46 +3,21 @@
     <div class="home-desc-center">
       <div class="logo">
         <h1 class="adpl">ADPL LLP</h1>
-        <h4 class="adpl">Chartered Certified Accountants
-        </h4>
+        <h4 class="adpl">Chartered Certified Accountants</h4>
         <h4 class="adpl">Business Advisers</h4>
-        <h4 class="adpl italic">Global Business Partner
-        </h4>
+        <h4 class="adpl italic">Global Business Partner</h4>
       </div>
       <div class="container">
         <div class="row justify-content-center grid-container">
           <div class="mb-4" *ngFor="let office of offices; let i = index">
-            <a href="www.adplmeta.com">
-              <mat-card
-              *ngIf="office?.name === 'ADPL META'"
-              class="example-card"
-              style="padding-left: 30px; padding-right: 30px"
-              >
-              <mat-card-title-group>
-                <mat-card-title>{{ office?.name }}</mat-card-title>
-                <mat-card-subtitle>{{office?.name2}}</mat-card-subtitle>
-                <mat-card-subtitle>{{ office?.phone }}</mat-card-subtitle>
-                <!-- <img
-                  style="height: 90px; width: 90px"
-                  mat-card-sm-image
-                  alt="main-img"
-                  [src]="office?.mainImage"
-                  /> -->
-                </mat-card-title-group>
-                <mat-card-content style="margin-top: 8px ;font-weight: 500;">
-                  {{ office?.address }}
-                </mat-card-content>
-              </mat-card>
-            </a>
-              <mat-card
-              *ngIf="office?.name !== 'ADPL META'"
+            <mat-card
               class="example-card"
               style="padding-left: 30px; padding-right: 30px"
               (click)="openDetails(office)"
             >
               <mat-card-title-group>
                 <mat-card-title>{{ office?.name }}</mat-card-title>
-                <mat-card-subtitle>{{office?.name2}}</mat-card-subtitle>
+                <mat-card-subtitle>{{ office?.name2 }}</mat-card-subtitle>
                 <mat-card-subtitle>{{ office?.phone }}</mat-card-subtitle>
                 <!-- <img
                   style="height: 90px; width: 90px"
@@ -51,38 +26,41 @@
                   [src]="office?.mainImage"
                 /> -->
               </mat-card-title-group>
-              <mat-card-content style="margin-top: 8px ;font-weight: 500;">
+              <mat-card-content style="margin-top: 8px; font-weight: 500">
                 {{ office?.address }}
               </mat-card-content>
             </mat-card>
           </div>
-       
         </div>
       </div>
       <div class="button flex">
         <ul class="text-white list-inline team-social mt-1 mb-0">
-          <li class="list-inline-item ">
-            <a href="https://www.facebook.com/ADPLLLP/" target="_blank" 
+          <li class="list-inline-item">
+            <a href="https://www.facebook.com/ADPLLLP/" target="_blank"
               ><i class="ti-facebook white"></i
             ></a>
           </li>
           <li class="list-inline-item">
-            <a href="https://www.instagram.com/adplllp/" target="_blank" 
+            <a href="https://www.instagram.com/adplllp/" target="_blank"
               ><i class="ti-instagram white"></i
             ></a>
           </li>
           <li class="list-inline-item">
-            <a href="https://twitter.com/Accounting_dp" target="_blank" 
+            <a href="https://twitter.com/Accounting_dp" target="_blank"
               ><i class="ti-twitter-alt white"></i
             ></a>
           </li>
           <li class="list-inline-item">
-            <a href="https://www.linkedin.com/company/adplllp/mycompany/" target="_blank" 
+            <a
+              href="https://www.linkedin.com/company/adplllp/mycompany/"
+              target="_blank"
               ><i class="ti-linkedin white"></i
             ></a>
           </li>
           <li class="list-inline-item">
-            <a href="https://wa.me/447553077888/?text=urlencodedtext" target="_blank" 
+            <a
+              href="https://wa.me/447553077888/?text=urlencodedtext"
+              target="_blank"
               ><i class="ti-comments white"></i
             ></a>
           </li>
