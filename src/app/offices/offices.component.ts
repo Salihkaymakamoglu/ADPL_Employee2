@@ -44,7 +44,7 @@ export class OfficesComponent implements OnInit {
       email:"info@accountingdirectplus.com",
       mainImage: "./../../assets/images/adpl-logo.png",
       images: ["../../../assets/images/main.jpg","../../../assets/images/office.jpg"],
-      id: "5",
+      id: "4",
     },
     {
       name: "CYPRUS",
@@ -53,7 +53,7 @@ export class OfficesComponent implements OnInit {
       email:"cyprus@accountingdirectplus.com",
       mainImage: "./../../assets/images/adpl-logo.png",
       images: ["../../../assets/images/main.jpg","../../../assets/images/office.jpg"],
-      id: "8",
+      id: "5",
     },
     {
       name: "GERMANY",
@@ -73,13 +73,7 @@ export class OfficesComponent implements OnInit {
       images: ["../../../assets/images/main.jpg","../../../assets/images/office.jpg"],
       id: "7",
     }, 
-    {
-      name:"ADPL META",
-      name2:"Metaverse Digital Consultancy ",
-      phone:"Virtual Reality",
-      address:"Visit ::  www.adplmeta.com  :: "
-      
-    }
+ 
 
   ];
 
