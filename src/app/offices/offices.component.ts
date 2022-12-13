@@ -20,6 +20,7 @@ export class OfficesComponent implements OnInit {
     },
     {
       name: "LONDON COVENT GARDEN",
+      name2:"",
       address: "50 Long Acre,London, WC2E 9JR",
       phone: "+44 0208 886 9222",
       email:"info@accountingdirectplus.com",
@@ -48,6 +49,7 @@ export class OfficesComponent implements OnInit {
     },
     {
       name: "CYPRUS",
+      name2:"",
       address: "Daire No: 3 Emtan 2 Apt, Mete Adanir Caddesi, Girne, Cyprus",
       phone: "+90 533 866 92 22",
       email:"cyprus@accountingdirectplus.com",
@@ -57,6 +59,7 @@ export class OfficesComponent implements OnInit {
     },
     {
       name: "GERMANY",
+      name2:"",
       address: "Appointment only",
       phone: "+44 0208 886 9222",
       email:"info@accountingdirectplus.com",
@@ -66,6 +69,7 @@ export class OfficesComponent implements OnInit {
     },
     {
       name: "DUBAI",
+      name2:"",
       address: "Appointment only",
       phone: "+44 0208 886 9222",
       email:"info@accountingdirectplus.com",

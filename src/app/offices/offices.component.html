@@ -10,13 +10,13 @@
         <div class="row justify-content-center grid-container">
           <div class="mb-4" *ngFor="let office of offices; let i = index">
             <mat-card
-              class="example-card"
-              style="padding-left: 30px; padding-right: 30px"
+              class="example-card max-h"
+              style="padding-left: 25px; padding-right: 25px ; padding-bottom: 25px;"
               (click)="openDetails(office)"
             >
               <mat-card-title-group>
                 <mat-card-title>{{ office?.name }}</mat-card-title>
-                <mat-card-subtitle>{{ office?.name2 }}</mat-card-subtitle>
+                <mat-card-subtitle class="min-h">{{ office?.name2 }}</mat-card-subtitle>
                 <mat-card-subtitle>{{ office?.phone }}</mat-card-subtitle>
                 <!-- <img
                   style="height: 90px; width: 90px"
@@ -25,7 +25,7 @@
                   [src]="office?.mainImage"
                 /> -->
               </mat-card-title-group>
-              <mat-card-content style="margin-top: 8px; font-weight: 500">
+              <mat-card-content style="font-weight: 500">
                 {{ office?.address }}
               </mat-card-content>
             </mat-card>
@@ -33,8 +33,8 @@
           <div class="mb-4">
             <a href="https://adplmeta.com/home">
               <mat-card
-                class="example-card"
-                style="padding-left: 30px; padding-right: 30px"
+                class="example-card max-h"
+                style="padding-left: 25px; padding-right: 25px ; padding-bottom: 25px;"
               >
                 <mat-card-title-group>
                   <mat-card-title>ADPL META</mat-card-title>
