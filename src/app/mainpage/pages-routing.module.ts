@@ -16,6 +16,11 @@ const routes: Routes = [
     loadChildren: () =>
       import("../offices/offices.module").then((m) => m.OfficesModule),
   },
+  {
+    path: "OFFICES",
+    loadChildren: () =>
+      import("../offices/offices.module").then((m) => m.OfficesModule),
+  },
 
   {
     path: "thank-you-page",
