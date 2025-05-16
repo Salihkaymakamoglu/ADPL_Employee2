@@ -31,7 +31,7 @@ export class OfficesComponent implements OnInit {
     {
       name: "WALTHAM CROSS",
       name2:"Co Work & ADPL Meta",
-      address: "81 Turners Hill Cheshunt, Waltham Cross, EN8 9BA",
+      address: "81 Turners Hill Cheshunt, Waltham Cross, EN8 9BD",
       phone: "+44 0208 886 9222",
       email:"info@accountingdirectplus.com",
       mainImage: "./../../assets/images/adpl-logo.png",
